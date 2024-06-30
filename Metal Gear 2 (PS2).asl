@@ -212,7 +212,7 @@ startup
 init
 {
 	//This is used for our splits
-	vars.mg2completedSplits = new bool[80];
+	vars.mg2completedSplits = new bool[112];
 }
 
 update
@@ -338,8 +338,6 @@ update
 		current.MG2EV10 = current.JA_MG2EV10;
 		current.MG2EV11 = current.JA_MG2EV11;
 	}
-	
-	print(current.MG2IGT.ToString());
 }
 
 onStart
@@ -463,5 +461,5 @@ isLoading
 
 reset
 {
-		return current.MG2GameState != 8 && old.MG2GameState == 8;
+	return current.MG2GameState != 8 && old.MG2GameState == 8;
 }
