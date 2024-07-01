@@ -44,9 +44,9 @@ startup
 		emu.Make<byte>("PEF_MG2EV4", 0x26E09B);
 		emu.Make<byte>("PEF_MG2EV7", 0x26E09E);
 		emu.Make<byte>("PEF_MG2EV8", 0x26E09F);
-		emu.Make<byte>("PEF_MG2EV9", 0x26B3A0);
-		emu.Make<byte>("PEF_MG2EV10", 0x26B3A1);
-		emu.Make<byte>("PEF_MG2EV11", 0x26B3A2);
+		emu.Make<byte>("PEF_MG2EV9", 0x26E0A0);
+		emu.Make<byte>("PEF_MG2EV10", 0x26E0A1);
+		emu.Make<byte>("PEF_MG2EV11", 0x26E0A2);
 		
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the NTSCU (American) Version of the game
@@ -163,7 +163,7 @@ startup
 	"Hang Glider", "Cardboard Box", "Bucket", "Cold Medicine", "Cassette Tape", "Egg (Snake)", "Egg (Owl)", "Brooch", "Spray", "Cartridge"};
 	
 	vars.mg2BossID = new List<string>(){
-	"MG2BEV2_1", "MG2BEV3_0", "MG2BEV3_5", "MG2BEV4_4", "MG2BEV7_3", "MG2BEV7_7", "MG2BEV8_7", "MG2BEV9_5", "MG2BEV10_4", "MG2BEV10_7", "MG2BEV11_2"};
+	"MG2EV2_1", "MG2EV3_0", "MG2EV3_5", "MG2EV4_4", "MG2EV7_3", "MG2EV7_7", "MG2EV8_7", "MG2EV9_5", "MG2EV10_4", "MG2EV10_7", "MG2EV11_2"};
 	
 	vars.mg2BossSet = new List<string>(){
 	"Black Ninja", "Running Man", "Hind D", "Red Blaster", "Four Horsemen", "Jungle Evil", "Night Fright", "Drago Pettrovich Madnar", "Metal Gear D", "Gray Fox", "Big Boss"};
@@ -461,5 +461,5 @@ isLoading
 
 reset
 {
-	return current.MG2GameState != 8 && old.MG2GameState == 8;
+		return current.MG2GameState != 8 && old.MG2GameState == 8;
 }
