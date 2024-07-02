@@ -187,6 +187,8 @@ startup
 	vars.mg2BossSet = new List<string>(){
 	"Black Ninja", "Running Man", "Hind D", "Red Blaster", "Four Horsemen", "Jungle Evil", "Night Fright", "Drago Pettrovich Madnar", "Metal Gear D", "Gray Fox", "Big Boss"};
 
+	vars.Rank = "";
+
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//Metal Gear 2: Solid Snake Splits
 	settings.Add("mg2", false, "Metal Gear 2: Solid Snake Autosplitter");
@@ -368,6 +370,37 @@ update
 		
 		current.MG2AREA = current.JA_MG2AREA;
 		current.MG2SUBAREA = current.JA_MG2SUBAREA;
+	}
+
+	//function to display the current rank
+	if(current.MG2IGT>=1296000) {
+		vars.Rank = "Chicken";
+	} else if ((current.MG2IGT>971999)&&(current.MG2IGT<1296000)) {
+		vars.Rank = "Turtle";
+	} else if ((current.MG2IGT>809999)&&(current.MG2IGT<=971999)) {
+		vars.Rank = "Hippopotamus";
+	} else if ((current.MG2IGT>647999)&&(current.MG2IGT<=809999)) {
+		vars.Rank = "Elephant";
+	} else if ((current.MG2IGT>431999)&&(current.MG2IGT<=647999)) {
+		vars.Rank = "Deer";
+	} else if (current.MG2Kills >= 11) {
+		vars.Rank = "Zebra";
+	} else if (current.MG2Kills < 11) {
+		if ((current.MG2IGT>215999)&&(current.MG2IGT<=431999)) {
+			vars.Rank = "Zebra";
+		} else if ((current.MG2IGT>135499)&&(current.MG2IGT<=215999)) {
+			vars.Rank = "Jackal";
+		} else if ((current.MG2IGT>94499)&&(current.MG2IGT<=135499)) {
+			vars.Rank = "Panther";
+		} else if ((current.MG2Kills > 5) ||(current.MG2Continue > 0) || (current.MG2Alert > 6) ||(current.MG2Ration > 0)) {
+			vars.Rank = "Eagle";
+		} else {
+			if (current.MG2Diff == 1) {
+			vars.Rank = "Fox";
+			} else {
+			vars.Rank = "Big Boss";
+			}
+		}
 	}
 }
 
