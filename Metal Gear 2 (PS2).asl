@@ -504,7 +504,7 @@ split
 			}
 		}
 		
-		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[111])		{return vars.mg2completedSplits[111]  = true;}
+		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[112])		{return vars.mg2completedSplits[112]  = true;}
 	}
 }
 
