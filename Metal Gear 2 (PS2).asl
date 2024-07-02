@@ -205,7 +205,7 @@ startup
     	}
 	settings.CurrentDefaultParent = "mg2";
 	
-	settings.Add("End2", true, "Final Split (Alway Active)");
+	settings.Add("End2", true, "Final Split (Always Active)");
 	settings.CurrentDefaultParent = null;
 }
 
