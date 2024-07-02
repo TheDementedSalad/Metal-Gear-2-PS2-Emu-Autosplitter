@@ -525,5 +525,5 @@ isLoading
 
 reset
 {
-		return current.MG2GameState != 8 && old.MG2GameState == 8;
+		return current.MG2GameState == 8 && old.MG2GameState != 8;
 }
