@@ -419,7 +419,6 @@ split
 {
 	//Iterates through our splits and checks the bitmask for each one
 	//Metal Gear 2: Solid Snake Splits
-	//Metal Gear 2: Solid Snake Splits
 	if(settings["mg2"]){
 		for(int i = 0; i < 8; i++){
 			if(settings["MG2EQ1_" + i] && vars.bitCheck(current.MG2EQ1, i) && !vars.mg2completedSplits[0 + i]){
