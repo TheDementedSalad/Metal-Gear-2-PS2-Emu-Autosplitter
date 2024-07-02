@@ -1,5 +1,12 @@
 //emu-help tool created by jujstme - https://github.com/Jujstme
 
+// TODO: Add Rank Display variable
+// TODO: Add splits on entering certain areas first time
+// https://retroachievements.org/codenotes.php?g=2831 for memory data
+// Area ID: 0x26b05c
+// Subarea ID: 0x26b060
+
+
 state("LiveSplit") {}
 
 startup
@@ -47,6 +54,9 @@ startup
 		emu.Make<byte>("PEF_MG2EV9", 0x26E0A0);
 		emu.Make<byte>("PEF_MG2EV10", 0x26E0A1);
 		emu.Make<byte>("PEF_MG2EV11", 0x26E0A2);
+		//Location Data
+		emu.Make<uint>("PEF_MG2AREA",0x26DD94);
+		emu.Make<uint>("PEF_MG2SUBAREA",0x26DD98);
 		
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the NTSCU (American) Version of the game
@@ -77,6 +87,9 @@ startup
 		emu.Make<byte>("U_MG2EV9", 0x26B368);
 		emu.Make<byte>("U_MG2EV10", 0x26B369);
 		emu.Make<byte>("U_MG2EV11", 0x26B36A);
+		//Location Data
+		emu.Make<uint>("U_MG2AREA",0x26b05c);
+		emu.Make<uint>("U_MG2SUBAREA",0x26b060);
 
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the JPN (Japanese) Version of the game
@@ -107,6 +120,9 @@ startup
 		emu.Make<byte>("J_MG2EV9", 0x26AA50);
 		emu.Make<byte>("J_MG2EV10", 0x26AA51);
 		emu.Make<byte>("J_MG2EV11", 0x26AA52);
+		//Location Data
+		emu.Make<uint>("J_MG2AREA",0x26A744);
+		emu.Make<uint>("J_MG2SUBAREA",0x26A748);
 		
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the JPN (Japanese 20th Anniversary) Version of the game
@@ -137,6 +153,9 @@ startup
 		emu.Make<byte>("JA_MG2EV9", 0x26A9D0);
 		emu.Make<byte>("JA_MG2EV10", 0x26A9D1);
 		emu.Make<byte>("JA_MG2EV11", 0x26A9D2);
+		//Location Data
+		emu.Make<uint>("JA_MG2AREA",0x26A6C4);
+		emu.Make<uint>("JA_MG2SUBAREA",0x26A6C8);
 		return true;
     });
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -247,6 +266,9 @@ update
 		current.MG2EV9 = current.PEF_MG2EV9;
 		current.MG2EV10 = current.PEF_MG2EV10;
 		current.MG2EV11 = current.PEF_MG2EV11;
+
+		current.MG2AREA = current.PEF_MG2AREA;
+		current.MG2SUBAREA = current.PEF_MG2SUBAREA;
 	}
 	//US Subsistence Disc 2
 	if(current.UGamecode == "SLUS_212.43"){
@@ -277,6 +299,9 @@ update
 		current.MG2EV9 = current.U_MG2EV9;
 		current.MG2EV10 = current.U_MG2EV10;
 		current.MG2EV11 = current.U_MG2EV11;
+
+		current.MG2AREA = current.U_MG2AREA;
+		current.MG2SUBAREA = current.U_MG2SUBAREA;
 	}
 	//JPN Subsistence Disc 2
 	if(current.JGamecode == "SLPM_662.21"){
@@ -307,11 +332,14 @@ update
 		current.MG2EV9 = current.J_MG2EV9;
 		current.MG2EV10 = current.J_MG2EV10;
 		current.MG2EV11 = current.J_MG2EV11;
+
+		current.MG2AREA = current.J_MG2AREA;
+		current.MG2SUBAREA = current.J_MG2SUBAREA;
 	}
 	//JPN 20th Anniversary Disc 2
 	if(current.JAGamecode == "SLPM_667.95"){
 		//Metal Gear 2
-		current.MG2GameState = current.J_MG2GameState;
+		current.MG2GameState = current.JA_MG2GameState;
 	
 		current.MG2IGT = current.JA_MG2IGT;
 		current.MG2Ration = current.JA_MG2Ration;
@@ -337,6 +365,9 @@ update
 		current.MG2EV9 = current.JA_MG2EV9;
 		current.MG2EV10 = current.JA_MG2EV10;
 		current.MG2EV11 = current.JA_MG2EV11;
+		
+		current.MG2AREA = current.JA_MG2AREA;
+		current.MG2SUBAREA = current.JA_MG2SUBAREA;
 	}
 }
 
