@@ -389,7 +389,7 @@ update
 			vars.Rank = "Jackal";
 		} else if ((current.MG2IGT>94499)&&(current.MG2IGT<=135499)) {
 			vars.Rank = "Panther";
-		} else if ((current.MG2Kills > 5) ||(current.MG2Continue > 0) || (current.MG2Alert > 6) ||(current.MG2Ration > 0)) {
+		} else if ((current.MG2Kills > 5) ||(current.MG2Continue > 0) || (current.MG2Alert > 6) ||(current.MG2Ration > 0) || (current.MG2Special == 1)) {
 			vars.Rank = "Eagle";
 		} else {
 			if (current.MG2Diff == 1) {
