@@ -1,10 +1,7 @@
 //emu-help tool created by jujstme - https://github.com/Jujstme
 
-// TODO: Add Rank Display variable
 // TODO: Add splits on entering certain areas first time
 // https://retroachievements.org/codenotes.php?g=2831 for memory data
-// Area ID: 0x26b05c
-// Subarea ID: 0x26b060
 
 
 state("LiveSplit") {}
