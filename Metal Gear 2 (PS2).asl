@@ -46,11 +46,15 @@ startup
 		emu.Make<byte>("PEF_MG2EV2", 0x26E099);
 		emu.Make<byte>("PEF_MG2EV3", 0x26E09A);
 		emu.Make<byte>("PEF_MG2EV4", 0x26E09B);
+		emu.Make<byte>("PEF_MG2EV5", 0x26E09C);
+		emu.Make<byte>("PEF_MG2EV6", 0x26E09D);
 		emu.Make<byte>("PEF_MG2EV7", 0x26E09E);
 		emu.Make<byte>("PEF_MG2EV8", 0x26E09F);
 		emu.Make<byte>("PEF_MG2EV9", 0x26E0A0);
 		emu.Make<byte>("PEF_MG2EV10", 0x26E0A1);
 		emu.Make<byte>("PEF_MG2EV11", 0x26E0A2);
+		//Codecs Data
+		emu.Make<byte>("PEF_MG2CodecsCalled", 0x26E0AD);
 		//Location Data
 		emu.Make<uint>("PEF_MG2AREA",0x26DD94);
 		emu.Make<uint>("PEF_MG2SUBAREA",0x26DD98);
@@ -75,15 +79,19 @@ startup
 		emu.Make<byte>("U_MG2EQ4", 0x17A6B85);
 		emu.Make<byte>("U_MG2EQ5", 0x17A6B86);
 		emu.Make<byte>("U_MG2EQ6", 0x17A6B87);
-		//Event Flags for Bosses
+		//Event Flags for Bosses & Story
 		emu.Make<byte>("U_MG2EV2", 0x26B361);
 		emu.Make<byte>("U_MG2EV3", 0x26B362);
 		emu.Make<byte>("U_MG2EV4", 0x26B363);
+		emu.Make<byte>("U_MG2EV5", 0x26B364);
+		emu.Make<byte>("U_MG2EV6", 0x26B365);
 		emu.Make<byte>("U_MG2EV7", 0x26B366);
 		emu.Make<byte>("U_MG2EV8", 0x26B367);
 		emu.Make<byte>("U_MG2EV9", 0x26B368);
 		emu.Make<byte>("U_MG2EV10", 0x26B369);
 		emu.Make<byte>("U_MG2EV11", 0x26B36A);
+		//Codecs Data
+		emu.Make<byte>("U_MG2CodecsCalled", 0x26B375);
 		//Location Data
 		emu.Make<uint>("U_MG2AREA",0x26b05c);
 		emu.Make<uint>("U_MG2SUBAREA",0x26b060);
@@ -108,15 +116,19 @@ startup
 		emu.Make<byte>("J_MG2EQ4", 0x1457B35);
 		emu.Make<byte>("J_MG2EQ5", 0x1457B36);
 		emu.Make<byte>("J_MG2EQ6", 0x1457B37);
-		//Event Flags for Bosses && Story
+		//Event Flags for Bosses & Story
 		emu.Make<byte>("J_MG2EV2", 0x26AA49);
 		emu.Make<byte>("J_MG2EV3", 0x26AA4A);
 		emu.Make<byte>("J_MG2EV4", 0x26AA4B);
+		emu.Make<byte>("J_MG2EV5", 0x26AA4C);
+		emu.Make<byte>("J_MG2EV6", 0x26AA4D);
 		emu.Make<byte>("J_MG2EV7", 0x26AA4E);
 		emu.Make<byte>("J_MG2EV8", 0x26AA4F);
 		emu.Make<byte>("J_MG2EV9", 0x26AA50);
 		emu.Make<byte>("J_MG2EV10", 0x26AA51);
 		emu.Make<byte>("J_MG2EV11", 0x26AA52);
+		//Codecs Data
+		emu.Make<byte>("J_MG2CodecsCalled", 0x26AA5D);
 		//Location Data
 		emu.Make<uint>("J_MG2AREA",0x26A744);
 		emu.Make<uint>("J_MG2SUBAREA",0x26A748);
@@ -141,15 +153,19 @@ startup
 		emu.Make<byte>("JA_MG2EQ4", 0x1457B35);
 		emu.Make<byte>("JA_MG2EQ5", 0x1457B36);
 		emu.Make<byte>("JA_MG2EQ6", 0x1457B37);
-		//Event Flags for Bosses && Story
+		//Event Flags for Bosses & Story
 		emu.Make<byte>("JA_MG2EV2", 0x26A9C9);
 		emu.Make<byte>("JA_MG2EV3", 0x26A9CA);
 		emu.Make<byte>("JA_MG2EV4", 0x26A9CB);
+		emu.Make<byte>("JA_MG2EV5", 0x26A9CC);
+		emu.Make<byte>("JA_MG2EV6", 0x26A9CD);
 		emu.Make<byte>("JA_MG2EV7", 0x26A9CE);
 		emu.Make<byte>("JA_MG2EV8", 0x26A9CF);
 		emu.Make<byte>("JA_MG2EV9", 0x26A9D0);
 		emu.Make<byte>("JA_MG2EV10", 0x26A9D1);
 		emu.Make<byte>("JA_MG2EV11", 0x26A9D2);
+		//Codecs Data
+		emu.Make<byte>("JA_MG2CodecsCalled", 0x26A9DD);
 		//Location Data
 		emu.Make<uint>("JA_MG2AREA",0x26A6C4);
 		emu.Make<uint>("JA_MG2SUBAREA",0x26A6C8);
@@ -183,6 +199,18 @@ startup
 	
 	vars.mg2BossSet = new List<string>(){
 	"Black Ninja", "Running Man", "Hind D", "Red Blaster", "Four Horsemen", "Jungle Evil", "Night Fright", "Drago Pettrovich Madnar", "Metal Gear D", "Gray Fox", "Big Boss"};
+
+	vars.mg2EventID = new List<string>(){
+	"MG2EV2_3", "MG2EV2_6", "MG2EV4_2", "MG2EV5_1", "MG2EV5_2", "MG2EV5_6", "MG2EV6_3", "MG2EV7_5", "MG2EV8_5", "MG2EV11_4"};
+	
+	vars.mg2EventSet = new List<string>(){
+	"Green Beret Tailed", "Contacted Dr. Madnar", "Rescued Holly", "Grabbed Pidgeon", "Contacted Dr. Marv", "Met Up With Gustava", "Bridge Destroyed", "Glided Across Crevice", "Entered Prison", "Meet up with Holly For Escape"};
+
+	vars.mg2CodecsID = new List<string>(){
+	"MG2CodecsCalled_0", "MG2CodecsCalled_1", "MG2CodecsCalled_2", "MG2CodecsCalled_3", "MG2CodecsCalled_4", "MG2CodecsCalled_5", "MG2CodecsCalled_6", "MG2CodecsCalled_7"};
+
+	vars.mg2CodecsSet = new List<string>(){
+	"Campbell" , "Holly", "Master Miller", "Kasler", "Jacobsen", "Dr. Madnar", "Marv", "Your Number One Fan"};
 
 	vars.Rank = "";
 
@@ -219,10 +247,24 @@ startup
 	settings.Add("MG2Boss", false, "Splits On Boss Kills");
 		settings.CurrentDefaultParent = "MG2Boss";
 		for(int i = 0; i < 11; i++){
-        	settings.Add("" + vars.mg2BossID[i].ToString(), false, "" + vars.mg2BossSet[i].ToString());
+        	settings.Add("" + vars.mg2BossID[i].ToString(), true, "" + vars.mg2BossSet[i].ToString());
     	}
 	settings.CurrentDefaultParent = "mg2";
 	
+	settings.Add("MG2StoryFlags", false, "Splits On Completing Story Flags");
+		settings.CurrentDefaultParent = "MG2StoryFlags";
+		for(int i = 0; i < 10; i++){
+        	settings.Add("" + vars.mg2EventID[i].ToString(), true, "" + vars.mg2EventSet[i].ToString());
+    	}
+	settings.CurrentDefaultParent = "mg2";	
+
+	settings.Add("MG2Codecs", false, "Splits On Completing Codecs List");
+		settings.CurrentDefaultParent = "MG2Codecs";
+		for(int i = 0; i < 8; i++){
+        	settings.Add("" + vars.mg2CodecsID[i].ToString(), false, "" + vars.mg2CodecsSet[i].ToString());
+    	}
+	settings.CurrentDefaultParent = "mg2";
+
 	settings.Add("End2", true, "Final Split (Always Active)");
 	settings.CurrentDefaultParent = null;
 }
@@ -230,7 +272,7 @@ startup
 init
 {
 	//This is used for our splits
-	vars.mg2completedSplits = new bool[112];
+	vars.mg2completedSplits = new bool[137];
 }
 
 update
@@ -260,11 +302,15 @@ update
 		current.MG2EV2 = current.PEF_MG2EV2;
 		current.MG2EV3 = current.PEF_MG2EV3;
 		current.MG2EV4 = current.PEF_MG2EV4;
+		current.MG2EV5 = current.PEF_MG2EV5;
+		current.MG2EV6 = current.PEF_MG2EV6;
 		current.MG2EV7 = current.PEF_MG2EV7;
 		current.MG2EV8 = current.PEF_MG2EV8;
 		current.MG2EV9 = current.PEF_MG2EV9;
 		current.MG2EV10 = current.PEF_MG2EV10;
 		current.MG2EV11 = current.PEF_MG2EV11;
+
+		current.MG2CodecsCalled = current.PEF_MG2CodecsCalled;
 
 		current.MG2AREA = current.PEF_MG2AREA;
 		current.MG2SUBAREA = current.PEF_MG2SUBAREA;
@@ -293,11 +339,15 @@ update
 		current.MG2EV2 = current.U_MG2EV2;
 		current.MG2EV3 = current.U_MG2EV3;
 		current.MG2EV4 = current.U_MG2EV4;
+		current.MG2EV5 = current.U_MG2EV5;
+		current.MG2EV6 = current.U_MG2EV6;
 		current.MG2EV7 = current.U_MG2EV7;
 		current.MG2EV8 = current.U_MG2EV8;
 		current.MG2EV9 = current.U_MG2EV9;
 		current.MG2EV10 = current.U_MG2EV10;
 		current.MG2EV11 = current.U_MG2EV11;
+
+		current.MG2CodecsCalled = current.U_MG2CodecsCalled;
 
 		current.MG2AREA = current.U_MG2AREA;
 		current.MG2SUBAREA = current.U_MG2SUBAREA;
@@ -326,11 +376,15 @@ update
 		current.MG2EV2 = current.J_MG2EV2;
 		current.MG2EV3 = current.J_MG2EV3;
 		current.MG2EV4 = current.J_MG2EV4;
+		current.MG2EV5 = current.J_MG2EV5;
+		current.MG2EV6 = current.J_MG2EV6;
 		current.MG2EV7 = current.J_MG2EV7;
 		current.MG2EV8 = current.J_MG2EV8;
 		current.MG2EV9 = current.J_MG2EV9;
 		current.MG2EV10 = current.J_MG2EV10;
 		current.MG2EV11 = current.J_MG2EV11;
+
+		current.MG2CodecsCalled = current.J_MG2CodecsCalled;
 
 		current.MG2AREA = current.J_MG2AREA;
 		current.MG2SUBAREA = current.J_MG2SUBAREA;
@@ -359,11 +413,15 @@ update
 		current.MG2EV2 = current.JA_MG2EV2;
 		current.MG2EV3 = current.JA_MG2EV3;
 		current.MG2EV4 = current.JA_MG2EV4;
+		current.MG2EV5 = current.JA_MG2EV5;
+		current.MG2EV6 = current.JA_MG2EV6;
 		current.MG2EV7 = current.JA_MG2EV7;
 		current.MG2EV8 = current.JA_MG2EV8;
 		current.MG2EV9 = current.JA_MG2EV9;
 		current.MG2EV10 = current.JA_MG2EV10;
 		current.MG2EV11 = current.JA_MG2EV11;
+
+		current.MG2CodecsCalled = current.JA_MG2CodecsCalled;
 		
 		current.MG2AREA = current.JA_MG2AREA;
 		current.MG2SUBAREA = current.JA_MG2SUBAREA;
@@ -404,7 +462,7 @@ update
 onStart
 {
 	//resets the splits bools when a new run starts
-	vars.mg2completedSplits = new bool[112];
+	vars.mg2completedSplits = new bool[137];
 }
 
 start
@@ -417,91 +475,182 @@ split
 	//Iterates through our splits and checks the bitmask for each one
 	//Metal Gear 2: Solid Snake Splits
 	if(settings["mg2"]){
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EQ1_" + i] && vars.bitCheck(current.MG2EQ1, i) && !vars.mg2completedSplits[0 + i]){
-				return vars.mg2completedSplits[0 + i]  = true;
+		//only on change of the memory
+		if(current.MG2EQ1 != old.MG2EQ1) {
+			//iterate through each bit
+			for(int i = 0; i < 8; i++){
+				//if the split has not been done already AND the current bit has changed
+				if(!vars.mg2completedSplits[0 + i] && vars.bitCheck(current.MG2EQ1, i)) {
+					//if at the current bit of the memory there is a checkbox active for the split
+					if(settings["MG2EQ1_" + i]){
+						//set the current index in the split array to true and return true to split forward
+						return vars.mg2completedSplits[0 + i]  = true;
+					}
+				}
+			}
+		}
+		if(current.MG2EQ2 != old.MG2EQ2) {
+			for(int i = 0; i < 8; i++){
+				if(vars.mg2completedSplits[8 + i] && vars.bitCheck(current.MG2EQ2, i)) {
+					if(settings["MG2EQ2_" + i]){
+						return vars.mg2completedSplits[8 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EQ2_" + i] && vars.bitCheck(current.MG2EQ2, i) && !vars.mg2completedSplits[8 + i]){
-				return vars.mg2completedSplits[8 + i]  = true;
+		if(current.MG2EQ3 != old.MG2EQ3) {
+			for(int i = 1; i < 8; i++){
+				if(vars.bitCheck(current.MG2EQ3, i) && !vars.mg2completedSplits[16 + i]) {
+					if(settings["MG2EQ3_" + i]){
+						return vars.mg2completedSplits[16 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EQ3_" + i] && vars.bitCheck(current.MG2EQ3, i) && !vars.mg2completedSplits[16 + i]){
-				return vars.mg2completedSplits[16 + i]  = true;
+		if(current.MG2EQ4 != old.MG2EQ4) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EQ4, i) && !vars.mg2completedSplits[24 + i]) {
+					if(settings["MG2EQ4_" + i]){
+						return vars.mg2completedSplits[24 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EQ4_" + i] && vars.bitCheck(current.MG2EQ4, i) && !vars.mg2completedSplits[24 + i]){
-				return vars.mg2completedSplits[24 + i]  = true;
+		if(current.MG2EQ5 != old.MG2EQ5) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EQ5, i) && !vars.mg2completedSplits[32 + i]){
+					if(settings["MG2EQ5_" + i]){
+						return vars.mg2completedSplits[32 + i]  = true;
+					}
+				}
+			}
+		}
+
+		if(current.MG2EQ6 != old.MG2EQ6) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EQ6, i) && !vars.mg2completedSplits[40 + i]) {
+					if(settings["MG2EQ6_" + i]){
+						return vars.mg2completedSplits[40 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EQ5_" + i] && vars.bitCheck(current.MG2EQ5, i) && !vars.mg2completedSplits[32 + i]){
-				return vars.mg2completedSplits[32 + i]  = true;
+		if(current.MG2EV2 != old.MG2EV2) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV2, i) && !vars.mg2completedSplits[48 + i]) {
+					if(settings["MG2EV2_" + i]){
+						return vars.mg2completedSplits[48 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EQ6_" + i] && vars.bitCheck(current.MG2EQ6, i) && !vars.mg2completedSplits[40 + i]){
-				return vars.mg2completedSplits[40 + i]  = true;
+		if(current.MG2EV3 != old.MG2EV3) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV3, i) && !vars.mg2completedSplits[56 + i]) {
+					if(settings["MG2EV3_" + i]){
+						return vars.mg2completedSplits[56 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV2_" + i] && vars.bitCheck(current.MG2EV2, i) && !vars.mg2completedSplits[48 + i]){
-				return vars.mg2completedSplits[48 + i]  = true;
+		if(current.MG2EV4 != old.MG2EV4) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV4, i) && !vars.mg2completedSplits[64 + i]) {
+					if(settings["MG2EV4_" + i]){
+						return vars.mg2completedSplits[64 + i]  = true;
+					}
+				}
+			}		
+		}		
+
+		if(current.MG2EV5 != old.MG2EV5) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV5, i) && !vars.mg2completedSplits[72 + i]) {
+					if(settings["MG2EV5_" + i]){
+						return vars.mg2completedSplits[72 + i]  = true;
+					}
+				}
+			}		
+		}		
+
+		if(current.MG2EV6 != old.MG2EV6) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV6, i) && !vars.mg2completedSplits[80 + i]) {
+					if(settings["MG2EV6_" + i]){
+						return vars.mg2completedSplits[80 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV3_" + i] && vars.bitCheck(current.MG2EV3, i) && !vars.mg2completedSplits[56 + i]){
-				return vars.mg2completedSplits[56 + i]  = true;
+		if(current.MG2EV7 != old.MG2EV7) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV7, i) && !vars.mg2completedSplits[88 + i]) {
+					if(settings["MG2EV7_" + i]){
+						return vars.mg2completedSplits[88 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV4_" + i] && vars.bitCheck(current.MG2EV4, i) && !vars.mg2completedSplits[64 + i]){
-				return vars.mg2completedSplits[64 + i]  = true;
+		if(current.MG2EV8 != old.MG2EV8) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV8, i) && !vars.mg2completedSplits[96 + i]) {
+					if(settings["MG2EV8_" + i]){
+						return vars.mg2completedSplits[96 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV7_" + i] && vars.bitCheck(current.MG2EV7, i) && !vars.mg2completedSplits[72 + i]){
-				return vars.mg2completedSplits[72 + i]  = true;
+		if(current.MG2EV9 != old.MG2EV9) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV9, i) && !vars.mg2completedSplits[104 + i]) {
+					if(settings["MG2EV9_" + i]){
+						return vars.mg2completedSplits[104 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV8_" + i] && vars.bitCheck(current.MG2EV8, i) && !vars.mg2completedSplits[80 + i]){
-				return vars.mg2completedSplits[80 + i]  = true;
+		if(current.MG2EV10 != old.MG2EV10) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV10, i) && !vars.mg2completedSplits[112 + i]) {
+					if(settings["MG2EV10_" + i]){
+						return vars.mg2completedSplits[112 + i]  = true;
+					}
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV9_" + i] && vars.bitCheck(current.MG2EV9, i) && !vars.mg2completedSplits[88 + i]){
-				return vars.mg2completedSplits[88 + i]  = true;
+		if(current.MG2EV11 != old.MG2EV11) {
+			for(int i = 0; i < 8; i++){
+				if(vars.bitCheck(current.MG2EV11, i) && !vars.mg2completedSplits[120 + i]) {
+					if(settings["MG2EV11_" + i]){
+						return vars.mg2completedSplits[120 + i]  = true;
+					}
+				}
+			}
+		}
+
+		if(current.MG2CodecsCalled != old.MG2CodecsCalled) {
+			for(int i = 0; i < 8; i++){
+				if(settings["MG2CodecsCalled_" + i] && vars.bitCheck(current.MG2CodecsCalled, i) && !vars.mg2completedSplits[128 + i]){
+					return vars.mg2completedSplits[128 + i]  = true;
+				}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV10_" + i] && vars.bitCheck(current.MG2EV10, i) && !vars.mg2completedSplits[96 + i]){
-				return vars.mg2completedSplits[96 + i]  = true;
-			}
+		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[136])
+		{
+			return vars.mg2completedSplits[136]  = true;
 		}
-		
-		for(int i = 0; i < 8; i++){
-			if(settings["MG2EV11_" + i] && vars.bitCheck(current.MG2EV11, i) && !vars.mg2completedSplits[104 + i]){
-				return vars.mg2completedSplits[104 + i]  = true;
-			}
-		}
-		
-		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[112])		{return vars.mg2completedSplits[112]  = true;}
 	}
 }
 
