@@ -179,7 +179,7 @@ startup
 	"Hang Glider", "Cardboard Box", "Bucket", "Cold Medicine", "Cassette Tape", "Egg (Snake)", "Egg (Owl)", "Brooch", "Spray", "Cartridge"};
 	
 	vars.mg2BossID = new List<string>(){
-	"MG2EV2_1", "MG2EV3_0", "MG2EV3_5", "MG2EV4_4", "MG2EV7_3", "MG2EV7_7", "MG2EV8_7", "MG2EV9_5", "MG2EV10_4", "MG2EV10_7", "MG2EV11_2"};
+	"MG2EV2_1", "MG2EV3_0", "MG2EV3_5", "MG2EV4_4", "MG2EV7_3", "MG2EV7_7", "MG2EV8_7", "MG2EV9_5", "MG2EV10_4", "MG2EV10_7", "MG2EV11_3"};
 	
 	vars.mg2BossSet = new List<string>(){
 	"Black Ninja", "Running Man", "Hind D", "Red Blaster", "Four Horsemen", "Jungle Evil", "Night Fright", "Drago Pettrovich Madnar", "Metal Gear D", "Gray Fox", "Big Boss"};
