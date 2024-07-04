@@ -213,6 +213,7 @@ startup
 	"Campbell" , "Holly", "Master Miller", "Kasler", "Jacobsen", "Dr. Madnar", "Marv", "Your Number One Fan"};
 
 	vars.Rank = "";
+	vars.Difficulty = "";
 	vars.Debug = false;
 
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -377,6 +378,9 @@ update
 			}
 		}
 	}
+
+	vars.Difficulty = current.Diff == 0?"Original":"Easy";
+
 }
 
 onStart
