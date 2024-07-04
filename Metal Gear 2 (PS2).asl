@@ -265,6 +265,37 @@ startup
     	}
 	settings.CurrentDefaultParent = "mg2";
 
+	settings.Add("MG2Locations", false, "Splits On Arriving at a specific location");
+	settings.CurrentDefaultParent = "MG2Locations";
+	settings.Add("MG2Arena", false, "Splits On Entering Boss Fight Arena");
+	settings.CurrentDefaultParent = "MG2Arena";
+	settings.Add("EnterBlackNinja", true, "Enter Black Ninja Arena");
+	settings.Add("EnterRunningMan", true, "Enter Running Man Arena");
+	settings.Add("EnterHindD", true, "Enter Hind D Arena");
+	settings.Add("EnterRedBlaster", true, "Enter Red Blaster Arena");
+	settings.Add("EnterFourHorsemen", true, "Enter Four Horsemen Arena");
+	settings.Add("EnterJungleEvil", true, "Enter Jungle Evil Arena");
+	settings.Add("EnterNightFright", true, "Enter Night Fright Arena");
+	settings.Add("EnterTraitor", true, "Enter Traitor Arena");
+	settings.Add("EnterMetalGearD", true, "Enter Metal Gear D Arena");
+	settings.Add("EnterGrayFox", true, "Enter Gray Fox Arena");
+	settings.Add("EnterBigBoss", true, "Enter Big Boss Arena");
+
+	settings.CurrentDefaultParent = "MG2Locations";
+	settings.Add("MG2ExtraLocations", false, "Splits On Entering Extra Locations");
+	settings.CurrentDefaultParent = "MG2ExtraLocations";
+	settings.Add("EnterSwampLeft", true, "Start Swamp Area Going To Running Man");
+	settings.Add("FinishSwampLeft", true, "Finish Swamp Area Going To Running Man");
+	settings.Add("EnterSwampRight", true, "Start Swamp Area Coming From Running Man");
+	settings.Add("FinishSwampRight", true, "Finish Swamp Area Coming From Running Man");
+	settings.Add("EnterTower31FRoof", true, "Entering Tower 31F Rooftop");
+	settings.Add("EnterFreezer", true, "Entering Freezer to Freeze Brooch");
+	settings.Add("EnterSauna", true, "Entering Sauna to Heat Brooch");
+	settings.Add("StartTowerStairs", true, "Start Tower Stair Chase");
+	settings.Add("EndTowerStairs", true, "End Tower Stair Chase");
+	settings.Add("TowerJumpPoint", true, "Reach Tower Jump Point");
+
+	settings.CurrentDefaultParent = "mg2";
 	settings.Add("End2", true, "Final Split (Always Active)");
 	settings.CurrentDefaultParent = null;
 }
@@ -272,7 +303,7 @@ startup
 init
 {
 	//This is used for our splits
-	vars.mg2completedSplits = new bool[137];
+	vars.mg2completedSplits = new bool[158];
 }
 
 update
@@ -462,7 +493,7 @@ update
 onStart
 {
 	//resets the splits bools when a new run starts
-	vars.mg2completedSplits = new bool[137];
+	vars.mg2completedSplits = new bool[158];
 }
 
 start
@@ -475,6 +506,7 @@ split
 	//Iterates through our splits and checks the bitmask for each one
 	//Metal Gear 2: Solid Snake Splits
 	if(settings["mg2"]){
+		//splits based on items and weapons
 		//only on change of the memory
 		if(current.MG2EQ1 != old.MG2EQ1) {
 			//iterate through each bit
@@ -483,6 +515,9 @@ split
 				if(!vars.mg2completedSplits[0 + i] && vars.bitCheck(current.MG2EQ1, i)) {
 					//if at the current bit of the memory there is a checkbox active for the split
 					if(settings["MG2EQ1_" + i]){
+						if (i == 6) {
+							vars.MinesAcquired = true;
+						}
 						//set the current index in the split array to true and return true to split forward
 						return vars.mg2completedSplits[0 + i]  = true;
 					}
@@ -513,6 +548,9 @@ split
 			for(int i = 0; i < 8; i++){
 				if(vars.bitCheck(current.MG2EQ4, i) && !vars.mg2completedSplits[24 + i]) {
 					if(settings["MG2EQ4_" + i]){
+						if(i == 2) {
+							vars.GliderAcquired = true;
+						}
 						return vars.mg2completedSplits[24 + i]  = true;
 					}
 				}
@@ -523,6 +561,9 @@ split
 			for(int i = 0; i < 8; i++){
 				if(vars.bitCheck(current.MG2EQ5, i) && !vars.mg2completedSplits[32 + i]){
 					if(settings["MG2EQ5_" + i]){
+						if(i == 0) {
+							vars.BroochAcquired = true;
+						}
 						return vars.mg2completedSplits[32 + i]  = true;
 					}
 				}
@@ -539,6 +580,7 @@ split
 			}
 		}
 		
+		// Splits based on bosses beaten and story flags
 		if(current.MG2EV2 != old.MG2EV2) {
 			for(int i = 0; i < 8; i++){
 				if(vars.bitCheck(current.MG2EV2, i) && !vars.mg2completedSplits[48 + i]) {
@@ -639,6 +681,7 @@ split
 			}
 		}
 
+		//experimental split on codec frequency added to codec list
 		if(current.MG2CodecsCalled != old.MG2CodecsCalled) {
 			for(int i = 0; i < 8; i++){
 				if(settings["MG2CodecsCalled_" + i] && vars.bitCheck(current.MG2CodecsCalled, i) && !vars.mg2completedSplits[128 + i]){
@@ -647,9 +690,64 @@ split
 			}
 		}
 		
-		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[136])
+		//Location based splits
+		if(current.MG2AREA != old.MG2AREA || current.MG2SUBAREA != old.MG2SUBAREA) {
+			//entering boss arena splits
+			//entering Black Ninja room
+			if(current.MG2AREA == 3 && current.MG2SUBAREA == 6 && old.MG2SUBAREA == 7 && !vars.mg2completedSplits[136] && settings["EnterBlackNinja"]) return vars.mg2completedSplits[136] = true;
+			//entering Running Man room
+			if(current.MG2AREA == 7 && current.MG2SUBAREA == 24 && old.MG2SUBAREA == 26 && !vars.mg2completedSplits[137] && settings["EnterRunningMan"]) return vars.mg2completedSplits[137] = true;
+			//entering Hind D room
+			if(current.MG2AREA == 7 && current.MG2SUBAREA == 19 && old.MG2SUBAREA == 17 && !vars.mg2completedSplits[138] && settings["EnterHindD"]) return vars.mg2completedSplits[138] = true;
+			//entering Red Blaster room
+			if(current.MG2AREA == 14 && old.MG2AREA == 11 && !vars.mg2completedSplits[139] && settings["EnterRedBlaster"]) return vars.mg2completedSplits[139] = true;
+			//entering Four Horsemen room
+			if(current.MG2AREA == 11 && current.MG2SUBAREA == 11 && old.MG2SUBAREA == 7 && !vars.bitCheck(current.MG2EQ4, 2)  && !vars.mg2completedSplits[140] && settings["EnterFourHorsemen"]) return vars.mg2completedSplits[140] = true;
+			//entering Jungle Evil room
+			if(current.MG2AREA == 10 && old.MG2AREA == 15 && !vars.mg2completedSplits[141] && settings["EnterJungleEvil"]) return vars.mg2completedSplits[141] = true;
+			//entering Night Fright room
+			if(current.MG2AREA == 19 && old.MG2AREA == 10 && !vars.mg2completedSplits[142] && settings["EnterNightFright"]) return vars.mg2completedSplits[142] = true;
+			//entering Dr Madnar room
+			if(current.MG2AREA == 19 && current.MG2SUBAREA == 5 && old.MG2SUBAREA == 4 && !vars.mg2completedSplits[143] && settings["EnterTraitor"]) return vars.mg2completedSplits[143] = true;
+			//entering Metal Gear D room
+			if(current.MG2AREA == 18 && current.MG2SUBAREA == 8 && old.MG2SUBAREA == 3 && !vars.mg2completedSplits[144] && settings["EnterMetalGearD"]) return vars.mg2completedSplits[144] = true;
+			//entering Gray Fox room
+			if(current.MG2AREA == 18 && current.MG2SUBAREA == 2 && old.MG2SUBAREA == 3 && !vars.mg2completedSplits[145] && settings["EnterGrayFox"]) return vars.mg2completedSplits[145] = true;
+			//entering Big Boss room
+			if(current.MG2AREA == 18 && current.MG2SUBAREA == 6 && old.MG2SUBAREA == 1 && !vars.mg2completedSplits[146] && settings["EnterBigBoss"]) return vars.mg2completedSplits[146] = true;
+
+
+			//entering swamp to go to running man
+			if(current.MG2AREA == 7) {
+				if(current.MG2SUBAREA == 8 && old.MG2SUBAREA == 7 && !vars.mg2completedSplits[147] && vars.bitCheck(current.MG2EQ1, 6) && settings["EnterSwampLeft"]) return vars.mg2completedSplits[147] = true;
+				//finishing swamp to go to running man
+				if(current.MG2SUBAREA == 9 && old.MG2SUBAREA == 4 && !vars.mg2completedSplits[148] && settings["FinishSwampLeft"]) return vars.mg2completedSplits[148] = true;
+				//starting swamp post running man
+				if(current.MG2SUBAREA == 4 && old.MG2SUBAREA == 9 && !vars.mg2completedSplits[149] && vars.bitCheck(current.MG2EV3, 0) && settings["EnterSwampRight"]) return vars.mg2completedSplits[149] = true;
+				//finishing swamp post running man
+				if(current.MG2SUBAREA == 7 && old.MG2SUBAREA == 8 && !vars.mg2completedSplits[150] && vars.bitCheck(current.MG2EV3, 0) && settings["FinishSwampRight"]) return vars.mg2completedSplits[150] = true;
+			}
+
+			//entering Tower 31F roof (start of pidgeon)
+			if(current.MG2AREA == 14 && current.MG2SUBAREA == 7 && old.MG2SUBAREA == 6 && !vars.mg2completedSplits[151] && settings["EnterTower31FRoof"]) return vars.mg2completedSplits[151] = true;
+
+			//entering freezer to freeze brooch
+			if(current.MG2AREA == 4 && current.MG2SUBAREA == 26 && old.MG2SUBAREA == 8 && vars.bitCheck(current.MG2EQ5, 0) && !vars.mg2completedSplits[152] && settings["EnterFreezer"]) return vars.mg2completedSplits[152] = true;
+			//entering sauna to heat brooch
+			if(current.MG2AREA == 4 && current.MG2SUBAREA == 9 && old.MG2SUBAREA == 14 && vars.bitCheck(current.MG2EQ5, 0) && !vars.mg2completedSplits[153] && settings["EnterSauna"]) return vars.mg2completedSplits[153] = true;
+
+			//start tower stair climb
+			if(current.MG2AREA == 16 && old.MG2AREA == 12 && !vars.mg2completedSplits[154] && settings["StartTowerStairs"]) return vars.mg2completedSplits[154] = true;
+			//finish tower stair climb
+			if(current.MG2AREA == 13 && old.MG2AREA == 16 && !vars.mg2completedSplits[155] && settings["EndTowerStairs"]) return vars.mg2completedSplits[155] = true;
+			//enter tower jump point
+			if(current.MG2AREA == 13 && current.MG2SUBAREA == 4 && old.MG2SUBAREA == 5 && !vars.mg2completedSplits[156] && settings["TowerJumpPoint"]) return vars.mg2completedSplits[156] = true;
+		}
+
+		//final split - always active
+		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[157])
 		{
-			return vars.mg2completedSplits[136]  = true;
+			return vars.mg2completedSplits[157]  = true;
 		}
 	}
 }
