@@ -1,9 +1,5 @@
 //emu-help tool created by jujstme - https://github.com/Jujstme
 
-// TODO: Add splits on entering certain areas first time
-// https://retroachievements.org/codenotes.php?g=2831 for memory data
-
-
 state("LiveSplit") {}
 
 startup
@@ -195,16 +191,20 @@ startup
 	"Hang Glider", "Cardboard Box", "Bucket", "Cold Medicine", "Cassette Tape", "Egg (Snake)", "Egg (Owl)", "Brooch", "Spray", "Cartridge"};
 	
 	vars.BossID = new List<string>(){
-	"EV2_1", "EV3_0", "EV3_5", "EV4_4", "EV7_3", "EV7_7", "EV8_7", "EV9_5", "EV10_4", "EV10_7", "EV11_3"};
+	"EV2_0", "EV2_1", "EV2_7", "EV3_0", "EV3_4", "EV3_5", "EV4_3", "EV4_4",
+	"EV7_2", "EV7_3", "EV7_6", "EV7_7", "EV8_6", "EV8_7", "EV9_4", "EV9_5",
+	"EV10_3", "EV10_4", "EV10_6",  "EV10_7", "EV11_0", "EV11_3"};
 	
 	vars.BossSet = new List<string>(){
-	"Black Ninja", "Running Man", "Hind D", "Red Blaster", "Four Horsemen", "Jungle Evil", "Night Fright", "Drago Pettrovich Madnar", "Metal Gear D", "Gray Fox", "Big Boss"};
+	"Started Black Ninja", "Defeated Black Ninja", "Started Running Man", "Defeated Running Man", "Started Hind D", "Defeated Hind D", "Started Red Blaster", "Defeated Red Blaster",
+	"Started Four Horsemen", "Deafeated Four Horsemen", "Started Jungle Evil", "Defeated Jungle Evil", "Started Night Fright", "Defeated Night Fright", "Started Traitor Encounter", "Defeated Traitor",
+	"Started Metal Gear D", "Defeated Metal Gear D", "Started Gray Fox", "Defeated Gray Fox", "Started Big Boss", "Defeated Big Boss"};
 
 	vars.EventID = new List<string>(){
-	"EV2_3", "EV2_6", "EV4_2", "EV5_1", "EV5_2", "EV5_6", "EV6_3", "EV7_5", "EV8_5", "EV11_4"};
+	"EV2_3", "EV2_6", "EV4_2", "EV5_1", "EV5_2", "EV5_3", "EV5_6", "EV6_3", "EV7_5", "EV8_5", "EV11_4"};
 	
 	vars.EventSet = new List<string>(){
-	"Green Beret Tailed", "Contacted Dr. Madnar", "Rescued Holly", "Grabbed Pidgeon", "Contacted Dr. Marv", "Met Up With Gustava", "Bridge Destroyed", "Glided Across Crevice", "Entered Prison", "Meet up with Holly For Escape"};
+	"Green Beret Tailed", "Contacted Dr. Madnar", "Rescued Holly", "Grabbed Pidgeon", "Contacted Dr. Marv", "Contacted Dr. Madnar about Marv", "Met Up With Gustava", "Bridge Destroyed", "Glided Across Crevice", "Entered Prison", "Meet up with Holly For Escape"};
 
 	vars.CodecsID = new List<string>(){
 	"CodecsCalled_0", "CodecsCalled_1", "CodecsCalled_2", "CodecsCalled_3", "CodecsCalled_4", "CodecsCalled_5", "CodecsCalled_6", "CodecsCalled_7"};
@@ -213,6 +213,7 @@ startup
 	"Campbell" , "Holly", "Master Miller", "Kasler", "Jacobsen", "Dr. Madnar", "Marv", "Your Number One Fan"};
 
 	vars.Rank = "";
+	vars.Debug = true;
 
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//Metal Gear 2: Solid Snake Splits
@@ -264,21 +265,6 @@ startup
 		
 
 	settings.Add("Locations", false, "Splits On Arriving at a specific location");
-	settings.CurrentDefaultParent = "Locations";
-	settings.Add("Arena", false, "Splits On Entering Boss Fight Arena");
-	settings.CurrentDefaultParent = "Arena";
-	settings.Add("3_6_7", false, "Enter Black Ninja Arena");
-	settings.Add("7_24_26", false, "Enter Running Man Arena");
-	settings.Add("7_19_17", false, "Enter Hind D Arena");
-	settings.Add("14_11", false, "Enter Red Blaster Arena");
-	settings.Add("11__11_7", false, "Enter Four Horsemen Arena");
-	settings.Add("10_15", false, "Enter Jungle Evil Arena");
-	settings.Add("19_10", false, "Enter Night Fright Arena");
-	settings.Add("19_5_4", false, "Enter Traitor Arena");
-	settings.Add("18_8_3", false, "Enter Metal Gear D Arena");
-	settings.Add("18_2_3", false, "Enter Gray Fox Arena");
-	settings.Add("18_6_1", false, "Enter Big Boss Arena");
-	settings.CurrentDefaultParent = null;
 
 	settings.CurrentDefaultParent = "Locations";
 	settings.Add("ExtraLocations", false, "Splits On Entering Extra Locations");
@@ -410,61 +396,84 @@ split
 	//Iterates through our splits and checks the bitmask for each one
 	for(int i = 0; i < 8; i++){
 		if(current.EQ1 != old.EQ1 && vars.bitCheck(current.EQ1, i)){
+			if (vars.Debug) print("found changed bit in EQ1_" + i);
 			setting = "EQ1_" + i;
-			print(setting);
 		}
 		if(current.EQ2 != old.EQ2 && vars.bitCheck(current.EQ2, i)){
+			if (vars.Debug) print("found changed bit in EQ2_" + i);
 			setting = "EQ2_" + i;
 		}
 		if(current.EQ3 != old.EQ3 && vars.bitCheck(current.EQ3, i)){
+			if (vars.Debug) print("found changed bit in EQ3_" + i);
 			setting = "EQ3_" + i;
 		}
 		if(current.EQ4 != old.EQ4 && vars.bitCheck(current.EQ4, i)){
+			if (vars.Debug) print("found changed bit in EQ4_" + i);
 			setting = "EQ4_" + i;
 		}
 		if(current.EQ5 != old.EQ5 && vars.bitCheck(current.EQ5, i)){
+			if (vars.Debug) print("found changed bit in EQ5_" + i);
 			setting = "EQ5_" + i;
 		}
 		if(current.EQ6 != old.EQ6 && vars.bitCheck(current.EQ6, i)){
+			if (vars.Debug) print("found changed bit in EQ6_" + i);
 			setting = "EQ6_" + i;
 		}
 		if(current.EV2 != old.EV2 && vars.bitCheck(current.EV2, i)){
+			if (vars.Debug) print("found changed bit in EV2_" + i);
 			setting = "EV2_" + i;
 		}
 		if(current.EV3 != old.EV3 && vars.bitCheck(current.EV3, i)){
+			if (vars.Debug) print("found changed bit in EV3_" + i);
 			setting = "EV3_" + i;
 		}
 		if(current.EV4 != old.EV4 && vars.bitCheck(current.EV4, i)){
+			if (vars.Debug) print("found changed bit in EV4_" + i);
 			setting = "EV4_" + i;
 		}
 		if(current.EV5 != old.EV5 && vars.bitCheck(current.EV5, i)){
+			if (vars.Debug) print("found changed bit in EV5_" + i);
 			setting = "EV5_" + i;
 		}
 		if(current.EV6 != old.EV6 && vars.bitCheck(current.EV6, i)){
+			if (vars.Debug) print("found changed bit in EV6_" + i);
 			setting = "EV6_" + i;
 		}
 		if(current.EV7 != old.EV7 && vars.bitCheck(current.EV7, i)){
+			if (vars.Debug) print("found changed bit in EV7_" + i);
 			setting = "EV7_" + i;
 		}
 		if(current.EV8 != old.EV8 && vars.bitCheck(current.EV8, i)){
+			if (vars.Debug) print("found changed bit in EV8_" + i);
 			setting = "EV8_" + i;
 		}
 		if(current.EV9 != old.EV9 && vars.bitCheck(current.EV9, i)){
+			if (vars.Debug) print("found changed bit in EV9_" + i);
 			setting = "EV9_" + i;
 		}
 		if(current.EV10 != old.EV10 && vars.bitCheck(current.EV10, i)){
+			if (vars.Debug) print("found changed bit in EV10_" + i);
 			setting = "EV10_" + i;
 		}
 		if(current.EV11 != old.EV11 && vars.bitCheck(current.EV11, i)){
+			if (vars.Debug) print("found changed bit in EV11_" + i);
 			setting = "EV11_" + i;
 		}
 		if(current.CodecsCalled != old.CodecsCalled && vars.bitCheck(current.CodecsCalled, i)){
 			setting = "CodecsCalled_" + i;
 		}
+		if (setting.Length > 0 && settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)){
+			// Debug. Comment out before release.
+			if (vars.Debug) print("split on " + setting);
+			return true;
+		}
 	}
 	
 	if(current.SUBAREA != old.SUBAREA){
 		setting = current.AREA + "_" + current.SUBAREA + "_" + old.SUBAREA;
+		if(setting == "7_8_7" && !vars.bitCheck(current.EQ1, 6)) {
+			setting = "";
+		}
 	}
 		
 	if(current.AREA != old.AREA){
@@ -476,7 +485,11 @@ split
 		setting = "Final";
 	}
 		
-	if (settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)){
+	
+//	if (vars.Debug && setting.Length > 0) print(setting + " Contains Key " + settings.ContainsKey(setting) + " and part of setting " + settings[setting]);
+	if (setting.Length > 0 && settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)){
+		// Debug. Comment out before release.
+		if (vars.Debug) print("split on " + setting);
 		return true;
 	}
 }
