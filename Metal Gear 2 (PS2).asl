@@ -535,6 +535,12 @@ split
 		if(current.EV4 != old.EV4 && vars.bitCheck(current.EV4, i)){
 			setting = "EV4_" + i;
 		}
+		if(current.EV5 != old.EV5 && vars.bitCheck(current.EV5, i)){
+			setting = "EV5_" + i;
+		}
+		if(current.EV6 != old.EV6 && vars.bitCheck(current.EV6, i)){
+			setting = "EV6_" + i;
+		}
 		if(current.EV7 != old.EV7 && vars.bitCheck(current.EV7, i)){
 			setting = "EV7_" + i;
 		}
