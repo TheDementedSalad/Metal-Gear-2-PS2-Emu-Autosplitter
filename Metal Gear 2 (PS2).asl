@@ -25,285 +25,285 @@ startup
 		emu.MakeString("JAGamecode", 11, 0x20BEC8);		//SLPM_667.95
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//Metal Gear 2: Solid Snake
-		emu.Make<byte>("PEF_MG2GameState", 0x26DCCC);
+		emu.Make<byte>("PEF_GameState", 0x26DCCC);
 		//Playthrough Info
-		emu.Make<uint>("PEF_MG2IGT", 0x26DB28);
-		emu.Make<uint>("PEF_MG2Ration", 0x26DB2C);
-		emu.Make<uint>("PEF_MG2Kills", 0x26DB30);
-		emu.Make<uint>("PEF_MG2Alert", 0x26DB34);
-		emu.Make<uint>("PEF_MG2Special", 0x26DB38);
-		emu.Make<uint>("PEF_MG2Save", 0x26DB3C);
-		emu.Make<uint>("PEF_MG2Continue", 0x26DB40);
-		emu.Make<byte>("PEF_MG2Diff", 0x17A9C94);
+		emu.Make<uint>("PEF_IGT", 0x26DB28);
+		emu.Make<uint>("PEF_Ration", 0x26DB2C);
+		emu.Make<uint>("PEF_Kills", 0x26DB30);
+		emu.Make<uint>("PEF_Alert", 0x26DB34);
+		emu.Make<uint>("PEF_Special", 0x26DB38);
+		emu.Make<uint>("PEF_Save", 0x26DB3C);
+		emu.Make<uint>("PEF_Continue", 0x26DB40);
+		emu.Make<byte>("PEF_Diff", 0x17A9C94);
 		//Items In Inventory Bits
-		emu.Make<byte>("PEF_MG2EQ1", 0x17A9C30);
-		emu.Make<byte>("PEF_MG2EQ2", 0x17A9C31);
-		emu.Make<byte>("PEF_MG2EQ3", 0x17A9C34);
-		emu.Make<byte>("PEF_MG2EQ4", 0x17A9C35);
-		emu.Make<byte>("PEF_MG2EQ5", 0x17A9C36);
-		emu.Make<byte>("PEF_MG2EQ6", 0x17A9C37);
+		emu.Make<byte>("PEF_EQ1", 0x17A9C30);
+		emu.Make<byte>("PEF_EQ2", 0x17A9C31);
+		emu.Make<byte>("PEF_EQ3", 0x17A9C34);
+		emu.Make<byte>("PEF_EQ4", 0x17A9C35);
+		emu.Make<byte>("PEF_EQ5", 0x17A9C36);
+		emu.Make<byte>("PEF_EQ6", 0x17A9C37);
 		//Event Flags for Bosses & Story
-		emu.Make<byte>("PEF_MG2EV2", 0x26E099);
-		emu.Make<byte>("PEF_MG2EV3", 0x26E09A);
-		emu.Make<byte>("PEF_MG2EV4", 0x26E09B);
-		emu.Make<byte>("PEF_MG2EV5", 0x26E09C);
-		emu.Make<byte>("PEF_MG2EV6", 0x26E09D);
-		emu.Make<byte>("PEF_MG2EV7", 0x26E09E);
-		emu.Make<byte>("PEF_MG2EV8", 0x26E09F);
-		emu.Make<byte>("PEF_MG2EV9", 0x26E0A0);
-		emu.Make<byte>("PEF_MG2EV10", 0x26E0A1);
-		emu.Make<byte>("PEF_MG2EV11", 0x26E0A2);
+		emu.Make<byte>("PEF_EV2", 0x26E099);
+		emu.Make<byte>("PEF_EV3", 0x26E09A);
+		emu.Make<byte>("PEF_EV4", 0x26E09B);
+		emu.Make<byte>("PEF_EV5", 0x26E09C);
+		emu.Make<byte>("PEF_EV6", 0x26E09D);
+		emu.Make<byte>("PEF_EV7", 0x26E09E);
+		emu.Make<byte>("PEF_EV8", 0x26E09F);
+		emu.Make<byte>("PEF_EV9", 0x26E0A0);
+		emu.Make<byte>("PEF_EV10", 0x26E0A1);
+		emu.Make<byte>("PEF_EV11", 0x26E0A2);
 		//Codecs Data
-		emu.Make<byte>("PEF_MG2CodecsCalled", 0x26E0AD);
+		emu.Make<byte>("PEF_CodecsCalled", 0x26E0AD);
 		//Location Data
-		emu.Make<uint>("PEF_MG2AREA",0x26DD94);
-		emu.Make<uint>("PEF_MG2SUBAREA",0x26DD98);
+		emu.Make<uint>("PEF_AREA",0x26DD94);
+		emu.Make<uint>("PEF_SUBAREA",0x26DD98);
 		
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the NTSCU (American) Version of the game
 		//Metal Gear 2: Solid Snake
-		emu.Make<byte>("U_MG2GameState", 0x26AF94);
+		emu.Make<byte>("U_GameState", 0x26AF94);
 		//Playthrough Info
-		emu.Make<uint>("U_MG2IGT", 0x26ADF0);
-		emu.Make<uint>("U_MG2Ration", 0x26ADF4);
-		emu.Make<uint>("U_MG2Kills", 0x26ADF8);
-		emu.Make<uint>("U_MG2Alert", 0x26ADFC);
-		emu.Make<uint>("U_MG2Special", 0x26AE00);
-		emu.Make<uint>("U_MG2Save", 0x26AE04);
-		emu.Make<uint>("U_MG2Continue", 0x26AE08);
-		emu.Make<byte>("U_MG2Diff", 0x17A6BE4);
+		emu.Make<uint>("U_IGT", 0x26ADF0);
+		emu.Make<uint>("U_Ration", 0x26ADF4);
+		emu.Make<uint>("U_Kills", 0x26ADF8);
+		emu.Make<uint>("U_Alert", 0x26ADFC);
+		emu.Make<uint>("U_Special", 0x26AE00);
+		emu.Make<uint>("U_Save", 0x26AE04);
+		emu.Make<uint>("U_Continue", 0x26AE08);
+		emu.Make<byte>("U_Diff", 0x17A6BE4);
 		//Items In Inventory Bits
-		emu.Make<byte>("U_MG2EQ1", 0x17A6B80);
-		emu.Make<byte>("U_MG2EQ2", 0x17A6B81);
-		emu.Make<byte>("U_MG2EQ3", 0x17A6B84);
-		emu.Make<byte>("U_MG2EQ4", 0x17A6B85);
-		emu.Make<byte>("U_MG2EQ5", 0x17A6B86);
-		emu.Make<byte>("U_MG2EQ6", 0x17A6B87);
+		emu.Make<byte>("U_EQ1", 0x17A6B80);
+		emu.Make<byte>("U_EQ2", 0x17A6B81);
+		emu.Make<byte>("U_EQ3", 0x17A6B84);
+		emu.Make<byte>("U_EQ4", 0x17A6B85);
+		emu.Make<byte>("U_EQ5", 0x17A6B86);
+		emu.Make<byte>("U_EQ6", 0x17A6B87);
 		//Event Flags for Bosses & Story
-		emu.Make<byte>("U_MG2EV2", 0x26B361);
-		emu.Make<byte>("U_MG2EV3", 0x26B362);
-		emu.Make<byte>("U_MG2EV4", 0x26B363);
-		emu.Make<byte>("U_MG2EV5", 0x26B364);
-		emu.Make<byte>("U_MG2EV6", 0x26B365);
-		emu.Make<byte>("U_MG2EV7", 0x26B366);
-		emu.Make<byte>("U_MG2EV8", 0x26B367);
-		emu.Make<byte>("U_MG2EV9", 0x26B368);
-		emu.Make<byte>("U_MG2EV10", 0x26B369);
-		emu.Make<byte>("U_MG2EV11", 0x26B36A);
+		emu.Make<byte>("U_EV2", 0x26B361);
+		emu.Make<byte>("U_EV3", 0x26B362);
+		emu.Make<byte>("U_EV4", 0x26B363);
+		emu.Make<byte>("U_EV5", 0x26B364);
+		emu.Make<byte>("U_EV6", 0x26B365);
+		emu.Make<byte>("U_EV7", 0x26B366);
+		emu.Make<byte>("U_EV8", 0x26B367);
+		emu.Make<byte>("U_EV9", 0x26B368);
+		emu.Make<byte>("U_EV10", 0x26B369);
+		emu.Make<byte>("U_EV11", 0x26B36A);
 		//Codecs Data
-		emu.Make<byte>("U_MG2CodecsCalled", 0x26B375);
+		emu.Make<byte>("U_CodecsCalled", 0x26B375);
 		//Location Data
-		emu.Make<uint>("U_MG2AREA",0x26b05c);
-		emu.Make<uint>("U_MG2SUBAREA",0x26b060);
+		emu.Make<uint>("U_AREA",0x26b05c);
+		emu.Make<uint>("U_SUBAREA",0x26b060);
 
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the JPN (Japanese) Version of the game
 		//Metal Gear 2: Solid Snake
-		emu.Make<byte>("J_MG2GameState", 0x26A67C);
+		emu.Make<byte>("J_GameState", 0x26A67C);
 		//Playthrough Info
-		emu.Make<uint>("J_MG2IGT", 0x26A4D8);
-		emu.Make<uint>("J_MG2Ration", 0x26A4DC);
-		emu.Make<uint>("J_MG2Kills", 0x26A4E0);
-		emu.Make<uint>("J_MG2Alert", 0x26A4E4);
-		emu.Make<uint>("J_MG2Special", 0x26A4E8);
-		emu.Make<uint>("J_MG2Save", 0x26A4EC);
-		emu.Make<uint>("J_MG2Continue", 0x26A4F0);
-		emu.Make<byte>("J_MG2Diff", 0x1457B94);
+		emu.Make<uint>("J_IGT", 0x26A4D8);
+		emu.Make<uint>("J_Ration", 0x26A4DC);
+		emu.Make<uint>("J_Kills", 0x26A4E0);
+		emu.Make<uint>("J_Alert", 0x26A4E4);
+		emu.Make<uint>("J_Special", 0x26A4E8);
+		emu.Make<uint>("J_Save", 0x26A4EC);
+		emu.Make<uint>("J_Continue", 0x26A4F0);
+		emu.Make<byte>("J_Diff", 0x1457B94);
 		//Items In Inventory Bits
-		emu.Make<byte>("J_MG2EQ1", 0x1457B30);
-		emu.Make<byte>("J_MG2EQ2", 0x1457B31);
-		emu.Make<byte>("J_MG2EQ3", 0x1457B34);
-		emu.Make<byte>("J_MG2EQ4", 0x1457B35);
-		emu.Make<byte>("J_MG2EQ5", 0x1457B36);
-		emu.Make<byte>("J_MG2EQ6", 0x1457B37);
+		emu.Make<byte>("J_EQ1", 0x1457B30);
+		emu.Make<byte>("J_EQ2", 0x1457B31);
+		emu.Make<byte>("J_EQ3", 0x1457B34);
+		emu.Make<byte>("J_EQ4", 0x1457B35);
+		emu.Make<byte>("J_EQ5", 0x1457B36);
+		emu.Make<byte>("J_EQ6", 0x1457B37);
 		//Event Flags for Bosses & Story
-		emu.Make<byte>("J_MG2EV2", 0x26AA49);
-		emu.Make<byte>("J_MG2EV3", 0x26AA4A);
-		emu.Make<byte>("J_MG2EV4", 0x26AA4B);
-		emu.Make<byte>("J_MG2EV5", 0x26AA4C);
-		emu.Make<byte>("J_MG2EV6", 0x26AA4D);
-		emu.Make<byte>("J_MG2EV7", 0x26AA4E);
-		emu.Make<byte>("J_MG2EV8", 0x26AA4F);
-		emu.Make<byte>("J_MG2EV9", 0x26AA50);
-		emu.Make<byte>("J_MG2EV10", 0x26AA51);
-		emu.Make<byte>("J_MG2EV11", 0x26AA52);
+		emu.Make<byte>("J_EV2", 0x26AA49);
+		emu.Make<byte>("J_EV3", 0x26AA4A);
+		emu.Make<byte>("J_EV4", 0x26AA4B);
+		emu.Make<byte>("J_EV5", 0x26AA4C);
+		emu.Make<byte>("J_EV6", 0x26AA4D);
+		emu.Make<byte>("J_EV7", 0x26AA4E);
+		emu.Make<byte>("J_EV8", 0x26AA4F);
+		emu.Make<byte>("J_EV9", 0x26AA50);
+		emu.Make<byte>("J_EV10", 0x26AA51);
+		emu.Make<byte>("J_EV11", 0x26AA52);
 		//Codecs Data
-		emu.Make<byte>("J_MG2CodecsCalled", 0x26AA5D);
+		emu.Make<byte>("J_CodecsCalled", 0x26AA5D);
 		//Location Data
-		emu.Make<uint>("J_MG2AREA",0x26A744);
-		emu.Make<uint>("J_MG2SUBAREA",0x26A748);
+		emu.Make<uint>("J_AREA",0x26A744);
+		emu.Make<uint>("J_SUBAREA",0x26A748);
 		
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		//These are for the JPN (Japanese 20th Anniversary) Version of the game
 		//Metal Gear 2: Solid Snake
-		emu.Make<byte>("JA_MG2GameState", 0x26A5FC);
+		emu.Make<byte>("JA_GameState", 0x26A5FC);
 		//Playthrough Info
-		emu.Make<uint>("JA_MG2IGT", 0x26A458);
-		emu.Make<uint>("JA_MG2Ration", 0x26A45C);
-		emu.Make<uint>("JA_MG2Kills", 0x26A460);
-		emu.Make<uint>("JA_MG2Alert", 0x26A464);
-		emu.Make<uint>("JA_MG2Special", 0x26A468);
-		emu.Make<uint>("JA_MG2Save", 0x26A46C);
-		emu.Make<uint>("JA_MG2Continue", 0x26A470);
-		emu.Make<byte>("JA_MG2Diff", 0x1457B94);
+		emu.Make<uint>("JA_IGT", 0x26A458);
+		emu.Make<uint>("JA_Ration", 0x26A45C);
+		emu.Make<uint>("JA_Kills", 0x26A460);
+		emu.Make<uint>("JA_Alert", 0x26A464);
+		emu.Make<uint>("JA_Special", 0x26A468);
+		emu.Make<uint>("JA_Save", 0x26A46C);
+		emu.Make<uint>("JA_Continue", 0x26A470);
+		emu.Make<byte>("JA_Diff", 0x1457B94);
 		//Items In Inventory Bits
-		emu.Make<byte>("JA_MG2EQ1", 0x1457B30);
-		emu.Make<byte>("JA_MG2EQ2", 0x1457B31);
-		emu.Make<byte>("JA_MG2EQ3", 0x1457B34);
-		emu.Make<byte>("JA_MG2EQ4", 0x1457B35);
-		emu.Make<byte>("JA_MG2EQ5", 0x1457B36);
-		emu.Make<byte>("JA_MG2EQ6", 0x1457B37);
+		emu.Make<byte>("JA_EQ1", 0x1457B30);
+		emu.Make<byte>("JA_EQ2", 0x1457B31);
+		emu.Make<byte>("JA_EQ3", 0x1457B34);
+		emu.Make<byte>("JA_EQ4", 0x1457B35);
+		emu.Make<byte>("JA_EQ5", 0x1457B36);
+		emu.Make<byte>("JA_EQ6", 0x1457B37);
 		//Event Flags for Bosses & Story
-		emu.Make<byte>("JA_MG2EV2", 0x26A9C9);
-		emu.Make<byte>("JA_MG2EV3", 0x26A9CA);
-		emu.Make<byte>("JA_MG2EV4", 0x26A9CB);
-		emu.Make<byte>("JA_MG2EV5", 0x26A9CC);
-		emu.Make<byte>("JA_MG2EV6", 0x26A9CD);
-		emu.Make<byte>("JA_MG2EV7", 0x26A9CE);
-		emu.Make<byte>("JA_MG2EV8", 0x26A9CF);
-		emu.Make<byte>("JA_MG2EV9", 0x26A9D0);
-		emu.Make<byte>("JA_MG2EV10", 0x26A9D1);
-		emu.Make<byte>("JA_MG2EV11", 0x26A9D2);
+		emu.Make<byte>("JA_EV2", 0x26A9C9);
+		emu.Make<byte>("JA_EV3", 0x26A9CA);
+		emu.Make<byte>("JA_EV4", 0x26A9CB);
+		emu.Make<byte>("JA_EV5", 0x26A9CC);
+		emu.Make<byte>("JA_EV6", 0x26A9CD);
+		emu.Make<byte>("JA_EV7", 0x26A9CE);
+		emu.Make<byte>("JA_EV8", 0x26A9CF);
+		emu.Make<byte>("JA_EV9", 0x26A9D0);
+		emu.Make<byte>("JA_EV10", 0x26A9D1);
+		emu.Make<byte>("JA_EV11", 0x26A9D2);
 		//Codecs Data
-		emu.Make<byte>("JA_MG2CodecsCalled", 0x26A9DD);
+		emu.Make<byte>("JA_CodecsCalled", 0x26A9DD);
 		//Location Data
-		emu.Make<uint>("JA_MG2AREA",0x26A6C4);
-		emu.Make<uint>("JA_MG2SUBAREA",0x26A6C8);
+		emu.Make<uint>("JA_AREA",0x26A6C4);
+		emu.Make<uint>("JA_SUBAREA",0x26A6C8);
 		return true;
     });
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	//Metal Gear 2: Solic Snake variables we can make settings from
-	vars.mg2KeyID = new List<string>(){
-	"MG2EQ5_1", "MG2EQ5_2", "MG2EQ5_3", "MG2EQ5_4", "MG2EQ5_5", "MG2EQ5_6", "MG2EQ5_7", "MG2EQ6_0", "MG2EQ6_1", "MG2EQ6_2", "MG2EQ6_3", "MG2EQ6_4"};
+	vars.KeyID = new List<string>(){
+	"EQ5_1", "EQ5_2", "EQ5_3", "EQ5_4", "EQ5_5", "EQ5_6", "EQ5_7", "EQ6_0", "EQ6_1", "EQ6_2", "EQ6_3", "EQ6_4"};
 	
-	vars.mg2KeySet = new List<string>(){
+	vars.KeySet = new List<string>(){
 	"Card 1", "Card 2", "Card 3", "Card 4", "Card 5", "Card 6", "Card 7", "Card 8", "Card 9", "Red Card (1-3)", "Blue Card (4-6", "Green Card (7-9)"};
 	
-	vars.mg2GunID = new List<string>(){
-	"MG2EQ1_0", "MG2EQ1_1", "MG2EQ1_2", "MG2EQ1_3", "MG2EQ1_4", "MG2EQ1_5", "MG2EQ1_6", "MG2EQ1_7", "MG2EQ2_0", "MG2EQ2_1", "MG2EQ2_2", "MG2EQ2_4"};
+	vars.GunID = new List<string>(){
+	"EQ1_0", "EQ1_1", "EQ1_2", "EQ1_3", "EQ1_4", "EQ1_5", "EQ1_6", "EQ1_7", "EQ2_0", "EQ2_1", "EQ2_2", "EQ2_4"};
 	
-	vars.mg2GunSet = new List<string>(){
+	vars.GunSet = new List<string>(){
 	"Handgun", "Submachine Gun", "Grenades", "Stinger Missiles", "RC Missiles", "Plastic Explosives", "Land Mines", "Camoflage Mat", "Gas Grenade", "Mouse", "Lighter", "Suppressor"};
 	
-	vars.mg2ItemID = new List<string>(){
-	"MG2EQ3_2", "MG2EQ3_3", "MG2EQ3_4", "MG2EQ3_5", "MG2EQ3_6", "MG2EQ3_7", "MG2EQ4_0", "MG2EQ4_1", 
-	"MG2EQ4_2", "MG2EQ4_3", "MG2EQ4_4", "MG2EQ4_5", "MG2EQ4_6", "MG2EQ4_7", "MG2EQ5_0", "MG2EQ6_5", "MG2EQ6_6"};
+	vars.ItemID = new List<string>(){
+	"EQ3_2", "EQ3_3", "EQ3_4", "EQ3_5", "EQ3_6", "EQ3_7", "EQ4_0", "EQ4_1", 
+	"EQ4_2", "EQ4_3", "EQ4_4", "EQ4_5", "EQ4_6", "EQ4_7", "EQ5_0", "EQ6_5", "EQ6_6"};
 	
-	vars.mg2ItemSet = new List<string>(){
+	vars.ItemSet = new List<string>(){
 	"Binoculars", "Night-Vision Goggles", "Infrared Goggles", "Gas Mask", "Body Armour", "Oxygen Tank", "Mine Detector", 
 	"Hang Glider", "Cardboard Box", "Bucket", "Cold Medicine", "Cassette Tape", "Egg (Snake)", "Egg (Owl)", "Brooch", "Spray", "Cartridge"};
 	
-	vars.mg2BossID = new List<string>(){
-	"MG2EV2_1", "MG2EV3_0", "MG2EV3_5", "MG2EV4_4", "MG2EV7_3", "MG2EV7_7", "MG2EV8_7", "MG2EV9_5", "MG2EV10_4", "MG2EV10_7", "MG2EV11_3"};
+	vars.BossID = new List<string>(){
+	"EV2_1", "EV3_0", "EV3_5", "EV4_4", "EV7_3", "EV7_7", "EV8_7", "EV9_5", "EV10_4", "EV10_7", "EV11_3"};
 	
-	vars.mg2BossSet = new List<string>(){
+	vars.BossSet = new List<string>(){
 	"Black Ninja", "Running Man", "Hind D", "Red Blaster", "Four Horsemen", "Jungle Evil", "Night Fright", "Drago Pettrovich Madnar", "Metal Gear D", "Gray Fox", "Big Boss"};
 
-	vars.mg2EventID = new List<string>(){
-	"MG2EV2_3", "MG2EV2_6", "MG2EV4_2", "MG2EV5_1", "MG2EV5_2", "MG2EV5_6", "MG2EV6_3", "MG2EV7_5", "MG2EV8_5", "MG2EV11_4"};
+	vars.EventID = new List<string>(){
+	"EV2_3", "EV2_6", "EV4_2", "EV5_1", "EV5_2", "EV5_6", "EV6_3", "EV7_5", "EV8_5", "EV11_4"};
 	
-	vars.mg2EventSet = new List<string>(){
+	vars.EventSet = new List<string>(){
 	"Green Beret Tailed", "Contacted Dr. Madnar", "Rescued Holly", "Grabbed Pidgeon", "Contacted Dr. Marv", "Met Up With Gustava", "Bridge Destroyed", "Glided Across Crevice", "Entered Prison", "Meet up with Holly For Escape"};
 
-	vars.mg2CodecsID = new List<string>(){
-	"MG2CodecsCalled_0", "MG2CodecsCalled_1", "MG2CodecsCalled_2", "MG2CodecsCalled_3", "MG2CodecsCalled_4", "MG2CodecsCalled_5", "MG2CodecsCalled_6", "MG2CodecsCalled_7"};
+	vars.CodecsID = new List<string>(){
+	"CodecsCalled_0", "CodecsCalled_1", "CodecsCalled_2", "CodecsCalled_3", "CodecsCalled_4", "CodecsCalled_5", "CodecsCalled_6", "CodecsCalled_7"};
 
-	vars.mg2CodecsSet = new List<string>(){
+	vars.CodecsSet = new List<string>(){
 	"Campbell" , "Holly", "Master Miller", "Kasler", "Jacobsen", "Dr. Madnar", "Marv", "Your Number One Fan"};
 
 	vars.Rank = "";
 
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//Metal Gear 2: Solid Snake Splits
-	settings.Add("mg2", false, "Metal Gear 2: Solid Snake Autosplitter");
-	settings.CurrentDefaultParent = "mg2";
+	settings.Add("Item", false, "Splits On Equipment & Weapons Entering Inventory");
+	settings.CurrentDefaultParent = "Item";
 	
-	settings.Add("MG2Item", false, "Splits On Equipment & Weapons Entering Inventory");
-	settings.CurrentDefaultParent = "MG2Item";
-	
-	settings.Add("MG2Key", false, "Key Cards");
-		settings.CurrentDefaultParent = "MG2Key";
+	settings.Add("Key", false, "Key Cards");
+		settings.CurrentDefaultParent = "Key";
 		for(int i = 0; i < 12; i++){
-        	settings.Add("" + vars.mg2KeyID[i].ToString(), false, "" + vars.mg2KeySet[i].ToString());
+        	settings.Add("" + vars.KeyID[i].ToString(), false, "" + vars.KeySet[i].ToString());
     	}
-	settings.CurrentDefaultParent = "MG2Item";
+	settings.CurrentDefaultParent = "Item";
 	
-	settings.Add("MG2Gun", false, "Weapons");
-		settings.CurrentDefaultParent = "MG2Gun";
+	settings.Add("Gun", false, "Weapons");
+		settings.CurrentDefaultParent = "Gun";
 		for(int i = 0; i < 12; i++){
-        	settings.Add("" + vars.mg2GunID[i].ToString(), false, "" + vars.mg2GunSet[i].ToString());
+        	settings.Add("" + vars.GunID[i].ToString(), false, "" + vars.GunSet[i].ToString());
     	}
-	settings.CurrentDefaultParent = "MG2Item";
+	settings.CurrentDefaultParent = "Item";
 	
-	settings.Add("MG2Items", false, "General Items");
-		settings.CurrentDefaultParent = "MG2Items";
+	settings.Add("Items", false, "General Items");
+		settings.CurrentDefaultParent = "Items";
 		for(int i = 0; i < 17; i++){
-        	settings.Add("" + vars.mg2ItemID[i].ToString(), false, "" + vars.mg2ItemSet[i].ToString());
+        	settings.Add("" + vars.ItemID[i].ToString(), false, "" + vars.ItemSet[i].ToString());
     	}
-	settings.CurrentDefaultParent = "MG2Item";
-	settings.CurrentDefaultParent = "mg2";
+		settings.CurrentDefaultParent = null;;
 	
-	settings.Add("MG2Boss", false, "Splits On Boss Kills");
-		settings.CurrentDefaultParent = "MG2Boss";
+	settings.Add("Boss", false, "Splits On Boss Kills");
+		settings.CurrentDefaultParent = "Boss";
 		for(int i = 0; i < 11; i++){
-        	settings.Add("" + vars.mg2BossID[i].ToString(), true, "" + vars.mg2BossSet[i].ToString());
+        	settings.Add("" + vars.BossID[i].ToString(), true, "" + vars.BossSet[i].ToString());
+
     	}
-	settings.CurrentDefaultParent = "mg2";
+		settings.CurrentDefaultParent = null;
 	
-	settings.Add("MG2StoryFlags", false, "Splits On Completing Story Flags");
-		settings.CurrentDefaultParent = "MG2StoryFlags";
+	settings.Add("StoryFlags", false, "Splits On Completing Story Flags");
+		settings.CurrentDefaultParent = "StoryFlags";
 		for(int i = 0; i < 10; i++){
-        	settings.Add("" + vars.mg2EventID[i].ToString(), true, "" + vars.mg2EventSet[i].ToString());
+        	settings.Add("" + vars.EventID[i].ToString(), true, "" + vars.EventSet[i].ToString());
     	}
-	settings.CurrentDefaultParent = "mg2";	
+		settings.CurrentDefaultParent = null;
 
-	settings.Add("MG2Codecs", false, "Splits On Completing Codecs List");
-		settings.CurrentDefaultParent = "MG2Codecs";
+	settings.Add("Codecs", false, "Splits On Completing Codecs List");
+		settings.CurrentDefaultParent = "Codecs";
 		for(int i = 0; i < 8; i++){
-        	settings.Add("" + vars.mg2CodecsID[i].ToString(), false, "" + vars.mg2CodecsSet[i].ToString());
+        	settings.Add("" + vars.CodecsID[i].ToString(), false, "" + vars.CodecsSet[i].ToString());
     	}
-	settings.CurrentDefaultParent = "mg2";
+		settings.CurrentDefaultParent = null;
+		
 
-	settings.Add("MG2Locations", false, "Splits On Arriving at a specific location");
-	settings.CurrentDefaultParent = "MG2Locations";
-	settings.Add("MG2Arena", false, "Splits On Entering Boss Fight Arena");
-	settings.CurrentDefaultParent = "MG2Arena";
-	settings.Add("EnterBlackNinja", true, "Enter Black Ninja Arena");
-	settings.Add("EnterRunningMan", true, "Enter Running Man Arena");
-	settings.Add("EnterHindD", true, "Enter Hind D Arena");
-	settings.Add("EnterRedBlaster", true, "Enter Red Blaster Arena");
-	settings.Add("EnterFourHorsemen", true, "Enter Four Horsemen Arena");
-	settings.Add("EnterJungleEvil", true, "Enter Jungle Evil Arena");
-	settings.Add("EnterNightFright", true, "Enter Night Fright Arena");
-	settings.Add("EnterTraitor", true, "Enter Traitor Arena");
-	settings.Add("EnterMetalGearD", true, "Enter Metal Gear D Arena");
-	settings.Add("EnterGrayFox", true, "Enter Gray Fox Arena");
-	settings.Add("EnterBigBoss", true, "Enter Big Boss Arena");
+	settings.Add("Locations", false, "Splits On Arriving at a specific location");
+	settings.CurrentDefaultParent = "Locations";
+	settings.Add("Arena", false, "Splits On Entering Boss Fight Arena");
+	settings.CurrentDefaultParent = "Arena";
+	settings.Add("3_6_7", false, "Enter Black Ninja Arena");
+	settings.Add("7_24_26", false, "Enter Running Man Arena");
+	settings.Add("7_19_17", false, "Enter Hind D Arena");
+	settings.Add("14_11", false, "Enter Red Blaster Arena");
+	settings.Add("11__11_7", false, "Enter Four Horsemen Arena");
+	settings.Add("10_15", false, "Enter Jungle Evil Arena");
+	settings.Add("19_10", false, "Enter Night Fright Arena");
+	settings.Add("19_5_4", false, "Enter Traitor Arena");
+	settings.Add("18_8_3", false, "Enter Metal Gear D Arena");
+	settings.Add("18_2_3", false, "Enter Gray Fox Arena");
+	settings.Add("18_6_1", false, "Enter Big Boss Arena");
+	settings.CurrentDefaultParent = null;
 
-	settings.CurrentDefaultParent = "MG2Locations";
-	settings.Add("MG2ExtraLocations", false, "Splits On Entering Extra Locations");
-	settings.CurrentDefaultParent = "MG2ExtraLocations";
-	settings.Add("EnterSwampLeft", true, "Start Swamp Area Going To Running Man");
-	settings.Add("FinishSwampLeft", true, "Finish Swamp Area Going To Running Man");
-	settings.Add("EnterSwampRight", true, "Start Swamp Area Coming From Running Man");
-	settings.Add("FinishSwampRight", true, "Finish Swamp Area Coming From Running Man");
-	settings.Add("EnterTower31FRoof", true, "Entering Tower 31F Rooftop");
-	settings.Add("EnterFreezer", true, "Entering Freezer to Freeze Brooch");
-	settings.Add("EnterSauna", true, "Entering Sauna to Heat Brooch");
-	settings.Add("StartTowerStairs", true, "Start Tower Stair Chase");
-	settings.Add("EndTowerStairs", true, "End Tower Stair Chase");
-	settings.Add("TowerJumpPoint", true, "Reach Tower Jump Point");
+	settings.CurrentDefaultParent = "Locations";
+	settings.Add("ExtraLocations", false, "Splits On Entering Extra Locations");
+	settings.CurrentDefaultParent = "ExtraLocations";
+	settings.Add("7_8_7", false, "Start Swamp Area Going To Running Man");
+	settings.Add("7_9_4", false, "Finish Swamp Area Going To Running Man");
+	settings.Add("7_4_9", false, "Start Swamp Area Coming From Running Man");
+	settings.Add("7_7_8", false, "Finish Swamp Area Coming From Running Man");
+	settings.Add("14_7_6", false, "Entering Tower 31F Rooftop");
+	settings.Add("4_26_8", false, "Entering Freezer to Freeze Brooch");
+	settings.Add("4_9_14", false, "Entering Sauna to Heat Brooch");
+	settings.Add("16_12", false, "Start Tower Stair Chase");
+	settings.Add("13_16", false, "End Tower Stair Chase");
+	settings.Add("13_4_5", false, "Reach Tower Jump Point");
+	settings.CurrentDefaultParent = null;
 
-	settings.CurrentDefaultParent = "mg2";
-	settings.Add("End2", true, "Final Split (Always Active)");
+
+	settings.Add("Final", true, "Final Split (Always Active)");
 	settings.CurrentDefaultParent = null;
 }
 
 init
 {
 	//This is used for our splits
-	vars.mg2completedSplits = new bool[158];
+	vars.completedSplits = new HashSet<string>();
 }
 
 update
@@ -312,176 +312,177 @@ update
 	//PAL FE Subsistence Disc 2
 	if(current.PGamecode == "SLES_820.43"){
 		//Metal Gear 2
-		current.MG2GameState = current.PEF_MG2GameState;
+		current.GameState = current.PEF_GameState;
 	
-		current.MG2IGT = current.PEF_MG2IGT;
-		current.MG2Ration = current.PEF_MG2Ration;
-		current.MG2Kills = current.PEF_MG2Kills;
-		current.MG2Alert = current.PEF_MG2Alert;
-		current.MG2Special = current.PEF_MG2Special;
-		current.MG2Save = current.PEF_MG2Save;
-		current.MG2Continue = current.PEF_MG2Continue;
-		current.MG2Diff = current.PEF_MG2Diff;
+		current.IGT = current.PEF_IGT;
+		current.Ration = current.PEF_Ration;
+		current.Kills = current.PEF_Kills;
+		current.Alert = current.PEF_Alert;
+		current.Special = current.PEF_Special;
+		current.Save = current.PEF_Save;
+		current.Continue = current.PEF_Continue;
+		current.Diff = current.PEF_Diff;
 			
-		current.MG2EQ1 = current.PEF_MG2EQ1;
-		current.MG2EQ2 = current.PEF_MG2EQ2;
-		current.MG2EQ3 = current.PEF_MG2EQ3;
-		current.MG2EQ4 = current.PEF_MG2EQ4;
-		current.MG2EQ5 = current.PEF_MG2EQ5;
-		current.MG2EQ6 = current.PEF_MG2EQ6;
+		current.EQ1 = current.PEF_EQ1;
+		current.EQ2 = current.PEF_EQ2;
+		current.EQ3 = current.PEF_EQ3;
+		current.EQ4 = current.PEF_EQ4;
+		current.EQ5 = current.PEF_EQ5;
+		current.EQ6 = current.PEF_EQ6;
 		
-		current.MG2EV2 = current.PEF_MG2EV2;
-		current.MG2EV3 = current.PEF_MG2EV3;
-		current.MG2EV4 = current.PEF_MG2EV4;
-		current.MG2EV5 = current.PEF_MG2EV5;
-		current.MG2EV6 = current.PEF_MG2EV6;
-		current.MG2EV7 = current.PEF_MG2EV7;
-		current.MG2EV8 = current.PEF_MG2EV8;
-		current.MG2EV9 = current.PEF_MG2EV9;
-		current.MG2EV10 = current.PEF_MG2EV10;
-		current.MG2EV11 = current.PEF_MG2EV11;
+		current.EV2 = current.PEF_EV2;
+		current.EV3 = current.PEF_EV3;
+		current.EV4 = current.PEF_EV4;
+		current.EV5 = current.PEF_EV5;
+		current.EV6 = current.PEF_EV6;
+		current.EV7 = current.PEF_EV7;
+		current.EV8 = current.PEF_EV8;
+		current.EV9 = current.PEF_EV9;
+		current.EV10 = current.PEF_EV10;
+		current.EV11 = current.PEF_EV11;
 
-		current.MG2CodecsCalled = current.PEF_MG2CodecsCalled;
+		current.CodecsCalled = current.PEF_CodecsCalled;
 
-		current.MG2AREA = current.PEF_MG2AREA;
-		current.MG2SUBAREA = current.PEF_MG2SUBAREA;
+		current.AREA = current.PEF_AREA;
+		current.SUBAREA = current.PEF_SUBAREA;
 	}
 	//US Subsistence Disc 2
 	if(current.UGamecode == "SLUS_212.43"){
 		//Metal Gear 2
-		current.MG2GameState = current.U_MG2GameState;
+		current.GameState = current.U_GameState;
 	
-		current.MG2IGT = current.U_MG2IGT;
-		current.MG2Ration = current.U_MG2Ration;
-		current.MG2Kills = current.U_MG2Kills;
-		current.MG2Alert = current.U_MG2Alert;
-		current.MG2Special = current.U_MG2Special;
-		current.MG2Save = current.U_MG2Save;
-		current.MG2Continue = current.U_MG2Continue;
-		current.MG2Diff = current.U_MG2Diff;
+		current.IGT = current.U_IGT;
+		current.Ration = current.U_Ration;
+		current.Kills = current.U_Kills;
+		current.Alert = current.U_Alert;
+		current.Special = current.U_Special;
+		current.Save = current.U_Save;
+		current.Continue = current.U_Continue;
+		current.Diff = current.U_Diff;
 			
-		current.MG2EQ1 = current.U_MG2EQ1;
-		current.MG2EQ2 = current.U_MG2EQ2;
-		current.MG2EQ3 = current.U_MG2EQ3;
-		current.MG2EQ4 = current.U_MG2EQ4;
-		current.MG2EQ5 = current.U_MG2EQ5;
-		current.MG2EQ6 = current.U_MG2EQ6;
+		current.EQ1 = current.U_EQ1;
+		current.EQ2 = current.U_EQ2;
+		current.EQ3 = current.U_EQ3;
+		current.EQ4 = current.U_EQ4;
+		current.EQ5 = current.U_EQ5;
+		current.EQ6 = current.U_EQ6;
 		
-		current.MG2EV2 = current.U_MG2EV2;
-		current.MG2EV3 = current.U_MG2EV3;
-		current.MG2EV4 = current.U_MG2EV4;
-		current.MG2EV5 = current.U_MG2EV5;
-		current.MG2EV6 = current.U_MG2EV6;
-		current.MG2EV7 = current.U_MG2EV7;
-		current.MG2EV8 = current.U_MG2EV8;
-		current.MG2EV9 = current.U_MG2EV9;
-		current.MG2EV10 = current.U_MG2EV10;
-		current.MG2EV11 = current.U_MG2EV11;
+		current.EV2 = current.U_EV2;
+		current.EV3 = current.U_EV3;
+		current.EV4 = current.U_EV4;
+		current.EV5 = current.U_EV5;
+		current.EV6 = current.U_EV6;
+		current.EV7 = current.U_EV7;
+		current.EV8 = current.U_EV8;
+		current.EV9 = current.U_EV9;
+		current.EV10 = current.U_EV10;
+		current.EV11 = current.U_EV11;
 
-		current.MG2CodecsCalled = current.U_MG2CodecsCalled;
+		current.CodecsCalled = current.U_CodecsCalled;
 
-		current.MG2AREA = current.U_MG2AREA;
-		current.MG2SUBAREA = current.U_MG2SUBAREA;
+		current.AREA = current.U_AREA;
+		current.SUBAREA = current.U_SUBAREA;
 	}
 	//JPN Subsistence Disc 2
 	if(current.JGamecode == "SLPM_662.21"){
 		//Metal Gear 2
-		current.MG2GameState = current.J_MG2GameState;
+		current.GameState = current.J_GameState;
 	
-		current.MG2IGT = current.J_MG2IGT;
-		current.MG2Ration = current.J_MG2Ration;
-		current.MG2Kills = current.J_MG2Kills;
-		current.MG2Alert = current.J_MG2Alert;
-		current.MG2Special = current.J_MG2Special;
-		current.MG2Save = current.J_MG2Save;
-		current.MG2Continue = current.J_MG2Continue;
-		current.MG2Diff = current.J_MG2Diff;
+		current.IGT = current.J_IGT;
+		current.Ration = current.J_Ration;
+		current.Kills = current.J_Kills;
+		current.Alert = current.J_Alert;
+		current.Special = current.J_Special;
+		current.Save = current.J_Save;
+		current.Continue = current.J_Continue;
+		current.Diff = current.J_Diff;
 			
-		current.MG2EQ1 = current.J_MG2EQ1;
-		current.MG2EQ2 = current.J_MG2EQ2;
-		current.MG2EQ3 = current.J_MG2EQ3;
-		current.MG2EQ4 = current.J_MG2EQ4;
-		current.MG2EQ5 = current.J_MG2EQ5;
-		current.MG2EQ6 = current.J_MG2EQ6;
+		current.EQ1 = current.J_EQ1;
+		current.EQ2 = current.J_EQ2;
+		current.EQ3 = current.J_EQ3;
+		current.EQ4 = current.J_EQ4;
+		current.EQ5 = current.J_EQ5;
+		current.EQ6 = current.J_EQ6;
 		
-		current.MG2EV2 = current.J_MG2EV2;
-		current.MG2EV3 = current.J_MG2EV3;
-		current.MG2EV4 = current.J_MG2EV4;
-		current.MG2EV5 = current.J_MG2EV5;
-		current.MG2EV6 = current.J_MG2EV6;
-		current.MG2EV7 = current.J_MG2EV7;
-		current.MG2EV8 = current.J_MG2EV8;
-		current.MG2EV9 = current.J_MG2EV9;
-		current.MG2EV10 = current.J_MG2EV10;
-		current.MG2EV11 = current.J_MG2EV11;
+		current.EV2 = current.J_EV2;
+		current.EV3 = current.J_EV3;
+		current.EV4 = current.J_EV4;
+		current.EV5 = current.J_EV5;
+		current.EV6 = current.J_EV6;
+		current.EV7 = current.J_EV7;
+		current.EV8 = current.J_EV8;
+		current.EV9 = current.J_EV9;
+		current.EV10 = current.J_EV10;
+		current.EV11 = current.J_EV11;
 
-		current.MG2CodecsCalled = current.J_MG2CodecsCalled;
+		current.CodecsCalled = current.J_CodecsCalled;
 
-		current.MG2AREA = current.J_MG2AREA;
-		current.MG2SUBAREA = current.J_MG2SUBAREA;
+		current.AREA = current.J_AREA;
+		current.SUBAREA = current.J_SUBAREA;
 	}
 	//JPN 20th Anniversary Disc 2
 	if(current.JAGamecode == "SLPM_667.95"){
 		//Metal Gear 2
-		current.MG2GameState = current.JA_MG2GameState;
+		current.GameState = current.JA_GameState;
 	
-		current.MG2IGT = current.JA_MG2IGT;
-		current.MG2Ration = current.JA_MG2Ration;
-		current.MG2Kills = current.JA_MG2Kills;
-		current.MG2Alert = current.J_MG2Alert;
-		current.MG2Special = current.JA_MG2Special;
-		current.MG2Save = current.JA_MG2Save;
-		current.MG2Continue = current.JA_MG2Continue;
-		current.MG2Diff = current.JA_MG2Diff;
+		current.IGT = current.JA_IGT;
+		current.Ration = current.JA_Ration;
+		current.Kills = current.JA_Kills;
+		current.Alert = current.J_Alert;
+		current.Special = current.JA_Special;
+		current.Save = current.JA_Save;
+		current.Continue = current.JA_Continue;
+		current.Diff = current.JA_Diff;
 			
-		current.MG2EQ1 = current.JA_MG2EQ1;
-		current.MG2EQ2 = current.JA_MG2EQ2;
-		current.MG2EQ3 = current.JA_MG2EQ3;
-		current.MG2EQ4 = current.JA_MG2EQ4;
-		current.MG2EQ5 = current.JA_MG2EQ5;
-		current.MG2EQ6 = current.JA_MG2EQ6;
+		current.EQ1 = current.JA_EQ1;
+		current.EQ2 = current.JA_EQ2;
+		current.EQ3 = current.JA_EQ3;
+		current.EQ4 = current.JA_EQ4;
+		current.EQ5 = current.JA_EQ5;
+		current.EQ6 = current.JA_EQ6;
 		
-		current.MG2EV2 = current.JA_MG2EV2;
-		current.MG2EV3 = current.JA_MG2EV3;
-		current.MG2EV4 = current.JA_MG2EV4;
-		current.MG2EV5 = current.JA_MG2EV5;
-		current.MG2EV6 = current.JA_MG2EV6;
-		current.MG2EV7 = current.JA_MG2EV7;
-		current.MG2EV8 = current.JA_MG2EV8;
-		current.MG2EV9 = current.JA_MG2EV9;
-		current.MG2EV10 = current.JA_MG2EV10;
-		current.MG2EV11 = current.JA_MG2EV11;
+		current.EV2 = current.JA_EV2;
+		current.EV3 = current.JA_EV3;
+		current.EV4 = current.JA_EV4;
+		current.EV5 = current.JA_EV5;
+		current.EV6 = current.JA_EV6;
+		current.EV7 = current.JA_EV7;
+		current.EV8 = current.JA_EV8;
+		current.EV9 = current.JA_EV9;
+		current.EV10 = current.JA_EV10;
+		current.EV11 = current.JA_EV11;
 
-		current.MG2CodecsCalled = current.JA_MG2CodecsCalled;
+		current.CodecsCalled = current.JA_CodecsCalled;
 		
-		current.MG2AREA = current.JA_MG2AREA;
-		current.MG2SUBAREA = current.JA_MG2SUBAREA;
+		current.AREA = current.JA_AREA;
+		current.SUBAREA = current.JA_SUBAREA;
+		
 	}
 
 	//function to display the current rank
-	if(current.MG2IGT>=1296000) {
+	if(current.IGT>=1296000) {
 		vars.Rank = "Chicken";
-	} else if ((current.MG2IGT>971999)&&(current.MG2IGT<1296000)) {
+	} else if ((current.IGT>971999)&&(current.IGT<1296000)) {
 		vars.Rank = "Turtle";
-	} else if ((current.MG2IGT>809999)&&(current.MG2IGT<=971999)) {
+	} else if ((current.IGT>809999)&&(current.IGT<=971999)) {
 		vars.Rank = "Hippopotamus";
-	} else if ((current.MG2IGT>647999)&&(current.MG2IGT<=809999)) {
+	} else if ((current.IGT>647999)&&(current.IGT<=809999)) {
 		vars.Rank = "Elephant";
-	} else if ((current.MG2IGT>431999)&&(current.MG2IGT<=647999)) {
+	} else if ((current.IGT>431999)&&(current.IGT<=647999)) {
 		vars.Rank = "Deer";
-	} else if (current.MG2Kills >= 11) {
+	} else if (current.Kills >= 11) {
 		vars.Rank = "Zebra";
-	} else if (current.MG2Kills < 11) {
-		if ((current.MG2IGT>215999)&&(current.MG2IGT<=431999)) {
+	} else if (current.Kills < 11) {
+		if ((current.IGT>215999)&&(current.IGT<=431999)) {
 			vars.Rank = "Zebra";
-		} else if ((current.MG2IGT>135499)&&(current.MG2IGT<=215999)) {
+		} else if ((current.IGT>135499)&&(current.IGT<=215999)) {
 			vars.Rank = "Jackal";
-		} else if ((current.MG2IGT>94499)&&(current.MG2IGT<=135499)) {
+		} else if ((current.IGT>94499)&&(current.IGT<=135499)) {
 			vars.Rank = "Panther";
-		} else if ((current.MG2Kills > 5) ||(current.MG2Continue > 0) || (current.MG2Alert > 6) ||(current.MG2Ration > 0) || (current.MG2Special == 1)) {
+		} else if ((current.Kills > 5) ||(current.Continue > 0) || (current.Alert > 6) ||(current.Ration > 0) || (current.Special == 1)) {
 			vars.Rank = "Eagle";
 		} else {
-			if (current.MG2Diff == 1) {
+			if (current.Diff == 1) {
 			vars.Rank = "Fox";
 			} else {
 			vars.Rank = "Big Boss";
@@ -493,262 +494,82 @@ update
 onStart
 {
 	//resets the splits bools when a new run starts
-	vars.mg2completedSplits = new bool[158];
+	vars.completedSplits.Clear();
 }
 
 start
 {
-	return current.MG2GameState != 8 && old.MG2GameState == 8 && current.MG2IGT > old.MG2IGT;
+	return current.GameState != 8 && old.GameState == 8 && current.IGT > old.IGT;
 }
 
 split
 {
+	string setting = "";
 	//Iterates through our splits and checks the bitmask for each one
-	//Metal Gear 2: Solid Snake Splits
-	if(settings["mg2"]){
-		//splits based on items and weapons
-		//only on change of the memory
-		if(current.MG2EQ1 != old.MG2EQ1) {
-			//iterate through each bit
-			for(int i = 0; i < 8; i++){
-				//if the split has not been done already AND the current bit has changed
-				if(!vars.mg2completedSplits[0 + i] && vars.bitCheck(current.MG2EQ1, i)) {
-					//if at the current bit of the memory there is a checkbox active for the split
-					if(settings["MG2EQ1_" + i]){
-						if (i == 6) {
-							vars.MinesAcquired = true;
-						}
-						//set the current index in the split array to true and return true to split forward
-						return vars.mg2completedSplits[0 + i]  = true;
-					}
-				}
-			}
+	for(int i = 0; i < 8; i++){
+		if(current.EQ1 != old.EQ1 && vars.bitCheck(current.EQ1, i)){
+			setting = "EQ1_" + i;
+			print(setting);
 		}
-		if(current.MG2EQ2 != old.MG2EQ2) {
-			for(int i = 0; i < 8; i++){
-				if(vars.mg2completedSplits[8 + i] && vars.bitCheck(current.MG2EQ2, i)) {
-					if(settings["MG2EQ2_" + i]){
-						return vars.mg2completedSplits[8 + i]  = true;
-					}
-				}
-			}
+		if(current.EQ2 != old.EQ2 && vars.bitCheck(current.EQ2, i)){
+			setting = "EQ2_" + i;
 		}
+		if(current.EQ3 != old.EQ3 && vars.bitCheck(current.EQ3, i)){
+			setting = "EQ3_" + i;
+		}
+		if(current.EQ4 != old.EQ4 && vars.bitCheck(current.EQ4, i)){
+			setting = "EQ4_" + i;
+		}
+		if(current.EQ5 != old.EQ5 && vars.bitCheck(current.EQ5, i)){
+			setting = "EQ5_" + i;
+		}
+		if(current.EQ6 != old.EQ6 && vars.bitCheck(current.EQ6, i)){
+			setting = "EQ6_" + i;
+		}
+		if(current.EV2 != old.EV2 && vars.bitCheck(current.EV2, i)){
+			setting = "EV2_" + i;
+		}
+		if(current.EV3 != old.EV3 && vars.bitCheck(current.EV3, i)){
+			setting = "EV3_" + i;
+		}
+		if(current.EV4 != old.EV4 && vars.bitCheck(current.EV4, i)){
+			setting = "EV4_" + i;
+		}
+		if(current.EV7 != old.EV7 && vars.bitCheck(current.EV7, i)){
+			setting = "EV7_" + i;
+		}
+		if(current.EV8 != old.EV8 && vars.bitCheck(current.EV8, i)){
+			setting = "EV8_" + i;
+		}
+		if(current.EV9 != old.EV9 && vars.bitCheck(current.EV9, i)){
+			setting = "EV9_" + i;
+		}
+		if(current.EV10 != old.EV10 && vars.bitCheck(current.EV10, i)){
+			setting = "EV10_" + i;
+		}
+		if(current.EV11 != old.EV11 && vars.bitCheck(current.EV11, i)){
+			setting = "EV11_" + i;
+		}
+		if(current.CodecsCalled != old.CodecsCalled && vars.bitCheck(current.CodecsCalled, i)){
+			setting = "CodecsCalled_" + i;
+		}
+	}
+	
+	if(current.SUBAREA != old.SUBAREA){
+		setting = current.AREA + "_" + current.SUBAREA + "_" + old.SUBAREA;
+	}
 		
-		if(current.MG2EQ3 != old.MG2EQ3) {
-			for(int i = 1; i < 8; i++){
-				if(vars.bitCheck(current.MG2EQ3, i) && !vars.mg2completedSplits[16 + i]) {
-					if(settings["MG2EQ3_" + i]){
-						return vars.mg2completedSplits[16 + i]  = true;
-					}
-				}
-			}
-		}
+	if(current.AREA != old.AREA){
+		setting = current.AREA + "_" + old.AREA;
+	}
 		
-		if(current.MG2EQ4 != old.MG2EQ4) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EQ4, i) && !vars.mg2completedSplits[24 + i]) {
-					if(settings["MG2EQ4_" + i]){
-						if(i == 2) {
-							vars.GliderAcquired = true;
-						}
-						return vars.mg2completedSplits[24 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EQ5 != old.MG2EQ5) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EQ5, i) && !vars.mg2completedSplits[32 + i]){
-					if(settings["MG2EQ5_" + i]){
-						if(i == 0) {
-							vars.BroochAcquired = true;
-						}
-						return vars.mg2completedSplits[32 + i]  = true;
-					}
-				}
-			}
-		}
-
-		if(current.MG2EQ6 != old.MG2EQ6) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EQ6, i) && !vars.mg2completedSplits[40 + i]) {
-					if(settings["MG2EQ6_" + i]){
-						return vars.mg2completedSplits[40 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		// Splits based on bosses beaten and story flags
-		if(current.MG2EV2 != old.MG2EV2) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV2, i) && !vars.mg2completedSplits[48 + i]) {
-					if(settings["MG2EV2_" + i]){
-						return vars.mg2completedSplits[48 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV3 != old.MG2EV3) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV3, i) && !vars.mg2completedSplits[56 + i]) {
-					if(settings["MG2EV3_" + i]){
-						return vars.mg2completedSplits[56 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV4 != old.MG2EV4) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV4, i) && !vars.mg2completedSplits[64 + i]) {
-					if(settings["MG2EV4_" + i]){
-						return vars.mg2completedSplits[64 + i]  = true;
-					}
-				}
-			}		
-		}		
-
-		if(current.MG2EV5 != old.MG2EV5) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV5, i) && !vars.mg2completedSplits[72 + i]) {
-					if(settings["MG2EV5_" + i]){
-						return vars.mg2completedSplits[72 + i]  = true;
-					}
-				}
-			}		
-		}		
-
-		if(current.MG2EV6 != old.MG2EV6) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV6, i) && !vars.mg2completedSplits[80 + i]) {
-					if(settings["MG2EV6_" + i]){
-						return vars.mg2completedSplits[80 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV7 != old.MG2EV7) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV7, i) && !vars.mg2completedSplits[88 + i]) {
-					if(settings["MG2EV7_" + i]){
-						return vars.mg2completedSplits[88 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV8 != old.MG2EV8) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV8, i) && !vars.mg2completedSplits[96 + i]) {
-					if(settings["MG2EV8_" + i]){
-						return vars.mg2completedSplits[96 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV9 != old.MG2EV9) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV9, i) && !vars.mg2completedSplits[104 + i]) {
-					if(settings["MG2EV9_" + i]){
-						return vars.mg2completedSplits[104 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV10 != old.MG2EV10) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV10, i) && !vars.mg2completedSplits[112 + i]) {
-					if(settings["MG2EV10_" + i]){
-						return vars.mg2completedSplits[112 + i]  = true;
-					}
-				}
-			}
-		}
-		
-		if(current.MG2EV11 != old.MG2EV11) {
-			for(int i = 0; i < 8; i++){
-				if(vars.bitCheck(current.MG2EV11, i) && !vars.mg2completedSplits[120 + i]) {
-					if(settings["MG2EV11_" + i]){
-						return vars.mg2completedSplits[120 + i]  = true;
-					}
-				}
-			}
-		}
-
-		//experimental split on codec frequency added to codec list
-		if(current.MG2CodecsCalled != old.MG2CodecsCalled) {
-			for(int i = 0; i < 8; i++){
-				if(settings["MG2CodecsCalled_" + i] && vars.bitCheck(current.MG2CodecsCalled, i) && !vars.mg2completedSplits[128 + i]){
-					return vars.mg2completedSplits[128 + i]  = true;
-				}
-			}
-		}
-		
-		//Location based splits
-		if(current.MG2AREA != old.MG2AREA || current.MG2SUBAREA != old.MG2SUBAREA) {
-			//entering boss arena splits
-			//entering Black Ninja room
-			if(current.MG2AREA == 3 && current.MG2SUBAREA == 6 && old.MG2SUBAREA == 7 && !vars.mg2completedSplits[136] && settings["EnterBlackNinja"]) return vars.mg2completedSplits[136] = true;
-			//entering Running Man room
-			if(current.MG2AREA == 7 && current.MG2SUBAREA == 24 && old.MG2SUBAREA == 26 && !vars.mg2completedSplits[137] && settings["EnterRunningMan"]) return vars.mg2completedSplits[137] = true;
-			//entering Hind D room
-			if(current.MG2AREA == 7 && current.MG2SUBAREA == 19 && old.MG2SUBAREA == 17 && !vars.mg2completedSplits[138] && settings["EnterHindD"]) return vars.mg2completedSplits[138] = true;
-			//entering Red Blaster room
-			if(current.MG2AREA == 14 && old.MG2AREA == 11 && !vars.mg2completedSplits[139] && settings["EnterRedBlaster"]) return vars.mg2completedSplits[139] = true;
-			//entering Four Horsemen room
-			if(current.MG2AREA == 11 && current.MG2SUBAREA == 11 && old.MG2SUBAREA == 7 && !vars.bitCheck(current.MG2EQ4, 2)  && !vars.mg2completedSplits[140] && settings["EnterFourHorsemen"]) return vars.mg2completedSplits[140] = true;
-			//entering Jungle Evil room
-			if(current.MG2AREA == 10 && old.MG2AREA == 15 && !vars.mg2completedSplits[141] && settings["EnterJungleEvil"]) return vars.mg2completedSplits[141] = true;
-			//entering Night Fright room
-			if(current.MG2AREA == 19 && old.MG2AREA == 10 && !vars.mg2completedSplits[142] && settings["EnterNightFright"]) return vars.mg2completedSplits[142] = true;
-			//entering Dr Madnar room
-			if(current.MG2AREA == 19 && current.MG2SUBAREA == 5 && old.MG2SUBAREA == 4 && !vars.mg2completedSplits[143] && settings["EnterTraitor"]) return vars.mg2completedSplits[143] = true;
-			//entering Metal Gear D room
-			if(current.MG2AREA == 18 && current.MG2SUBAREA == 8 && old.MG2SUBAREA == 3 && !vars.mg2completedSplits[144] && settings["EnterMetalGearD"]) return vars.mg2completedSplits[144] = true;
-			//entering Gray Fox room
-			if(current.MG2AREA == 18 && current.MG2SUBAREA == 2 && old.MG2SUBAREA == 3 && !vars.mg2completedSplits[145] && settings["EnterGrayFox"]) return vars.mg2completedSplits[145] = true;
-			//entering Big Boss room
-			if(current.MG2AREA == 18 && current.MG2SUBAREA == 6 && old.MG2SUBAREA == 1 && !vars.mg2completedSplits[146] && settings["EnterBigBoss"]) return vars.mg2completedSplits[146] = true;
-
-
-			//entering swamp to go to running man
-			if(current.MG2AREA == 7) {
-				if(current.MG2SUBAREA == 8 && old.MG2SUBAREA == 7 && !vars.mg2completedSplits[147] && vars.bitCheck(current.MG2EQ1, 6) && settings["EnterSwampLeft"]) return vars.mg2completedSplits[147] = true;
-				//finishing swamp to go to running man
-				if(current.MG2SUBAREA == 9 && old.MG2SUBAREA == 4 && !vars.mg2completedSplits[148] && settings["FinishSwampLeft"]) return vars.mg2completedSplits[148] = true;
-				//starting swamp post running man
-				if(current.MG2SUBAREA == 4 && old.MG2SUBAREA == 9 && !vars.mg2completedSplits[149] && vars.bitCheck(current.MG2EV3, 0) && settings["EnterSwampRight"]) return vars.mg2completedSplits[149] = true;
-				//finishing swamp post running man
-				if(current.MG2SUBAREA == 7 && old.MG2SUBAREA == 8 && !vars.mg2completedSplits[150] && vars.bitCheck(current.MG2EV3, 0) && settings["FinishSwampRight"]) return vars.mg2completedSplits[150] = true;
-			}
-
-			//entering Tower 31F roof (start of pidgeon)
-			if(current.MG2AREA == 14 && current.MG2SUBAREA == 7 && old.MG2SUBAREA == 6 && !vars.mg2completedSplits[151] && settings["EnterTower31FRoof"]) return vars.mg2completedSplits[151] = true;
-
-			//entering freezer to freeze brooch
-			if(current.MG2AREA == 4 && current.MG2SUBAREA == 26 && old.MG2SUBAREA == 8 && vars.bitCheck(current.MG2EQ5, 0) && !vars.mg2completedSplits[152] && settings["EnterFreezer"]) return vars.mg2completedSplits[152] = true;
-			//entering sauna to heat brooch
-			if(current.MG2AREA == 4 && current.MG2SUBAREA == 9 && old.MG2SUBAREA == 14 && vars.bitCheck(current.MG2EQ5, 0) && !vars.mg2completedSplits[153] && settings["EnterSauna"]) return vars.mg2completedSplits[153] = true;
-
-			//start tower stair climb
-			if(current.MG2AREA == 16 && old.MG2AREA == 12 && !vars.mg2completedSplits[154] && settings["StartTowerStairs"]) return vars.mg2completedSplits[154] = true;
-			//finish tower stair climb
-			if(current.MG2AREA == 13 && old.MG2AREA == 16 && !vars.mg2completedSplits[155] && settings["EndTowerStairs"]) return vars.mg2completedSplits[155] = true;
-			//enter tower jump point
-			if(current.MG2AREA == 13 && current.MG2SUBAREA == 4 && old.MG2SUBAREA == 5 && !vars.mg2completedSplits[156] && settings["TowerJumpPoint"]) return vars.mg2completedSplits[156] = true;
-		}
-
 		//final split - always active
-		if(current.MG2GameState == 24 && old.MG2GameState != 24 && !vars.mg2completedSplits[157])
-		{
-			return vars.mg2completedSplits[157]  = true;
-		}
+	if(current.GameState == 24 && old.GameState != 24){
+		setting = "Final";
+	}
+		
+	if (settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)){
+		return true;
 	}
 }
 
@@ -756,9 +577,9 @@ gameTime
 {
 	//Game Time is 15fps so divide by 15
 	if(current.PGamecode == "SLES_820.43"){
-		return TimeSpan.FromSeconds(current.MG2IGT / 16.667);
+		return TimeSpan.FromSeconds(current.IGT / 16.667);
 	}
-	else return TimeSpan.FromSeconds(current.MG2IGT / 15.0);
+	else return TimeSpan.FromSeconds(current.IGT / 15.0);
 }
 
 isLoading
@@ -768,5 +589,5 @@ isLoading
 
 reset
 {
-		return current.MG2GameState == 8 && old.MG2GameState != 8;
+	return current.GameState == 8 && old.GameState != 8;
 }
