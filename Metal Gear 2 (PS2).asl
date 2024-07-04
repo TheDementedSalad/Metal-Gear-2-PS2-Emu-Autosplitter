@@ -213,7 +213,7 @@ startup
 	"Campbell" , "Holly", "Master Miller", "Kasler", "Jacobsen", "Dr. Madnar", "Marv", "Your Number One Fan"};
 
 	vars.Rank = "";
-	vars.Debug = true;
+	vars.Debug = false;
 
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//Metal Gear 2: Solid Snake Splits
@@ -243,7 +243,7 @@ startup
 	
 	settings.Add("Boss", false, "Splits On Boss Kills");
 		settings.CurrentDefaultParent = "Boss";
-		for(int i = 0; i < 11; i++){
+		for(int i = 0; i < 22; i++){
         	settings.Add("" + vars.BossID[i].ToString(), true, "" + vars.BossSet[i].ToString());
 
     	}
@@ -251,7 +251,7 @@ startup
 	
 	settings.Add("StoryFlags", false, "Splits On Completing Story Flags");
 		settings.CurrentDefaultParent = "StoryFlags";
-		for(int i = 0; i < 10; i++){
+		for(int i = 0; i < 11; i++){
         	settings.Add("" + vars.EventID[i].ToString(), true, "" + vars.EventSet[i].ToString());
     	}
 		settings.CurrentDefaultParent = null;
@@ -472,6 +472,10 @@ split
 	if(current.SUBAREA != old.SUBAREA){
 		setting = current.AREA + "_" + current.SUBAREA + "_" + old.SUBAREA;
 		if(setting == "7_8_7" && !vars.bitCheck(current.EQ1, 6)) {
+			setting = "";
+		} else if(setting == "4_26_8" && !vars.bitCheck(current.EQ5, 0)) {
+			setting = "";
+		} else if(setting == "4_9_14" && !vars.bitCheck(current.EQ5, 0)) {
 			setting = "";
 		}
 	}
