@@ -8,6 +8,11 @@ state("LiveSplit") {}
 
 startup
 {
+
+	// add D shorthand to context - D = Data
+	vars.D = new ExpandoObject();
+	var D = vars.D;
+
 	//Creates a persistent instance of the PS2 class (for PS2 emulators)
 	//If you want to change it to another emulator type, change the "PS2" to say "PS1" if the splitter is for a PS1 Emu game
 	Assembly.Load(File.ReadAllBytes("Components/emu-help-v2")).CreateInstance("PS2");
@@ -308,6 +313,59 @@ init
 
 update
 {
+	// get a casted (to dictionary) reference to current
+	// so we can manipulate it using dynamic keynames
+	var cur = current as IDictionary<string, object>;
+
+	// list of pc address names to be recreated when on emu
+	var names = new List<string>() { 
+		"GameState",
+		"IGT",
+		"Ration",
+		"Kills",
+		"Alert",
+		"Special",
+		"Save",
+		"Continue",
+		"Diff",
+		"EQ1",
+		"EQ2",
+		"EQ3",
+		"EQ4",
+		"EQ5",
+		"EQ6",
+		"EV2",
+		"EV3",
+		"EV4",
+		"EV5",
+		"EV6",
+		"EV7",
+		"EV8",
+		"EV9",
+		"EV10",
+		"EV11",
+		"CodecsCalled",
+		"AREA",
+		"SUBAREA"
+	};
+
+	// (placeholder) have some logic to work out the version and create the prefix
+	string ver = null;
+
+	// assign version based on gamecode
+	if (current.PGamecode == "SLES_820.43") ver = "PEF_";
+	else if (current.UGamecode == "SLUS_212.43") ver = "U_";
+	else if (current.JGamecode == "SLPM_662.21") ver = "J_";
+	else if (current.JAGamecode == "SLPM_667.95") ver = "JA_";
+
+	// if in a supported version of the game...
+	if (ver == null) return false;
+	// loop through each desired address...
+	foreach(string name in names) {
+		// set e.g. current.GameTime to the value at e.g. current.US_GameTime
+		cur[name] = cur[ver + name];
+	}
+/*
 	//Checks what version you are on via the regional gamecode, then casts the correct information for that version
 	//PAL FE Subsistence Disc 2
 	if(current.PGamecode == "SLES_820.43"){
@@ -458,7 +516,7 @@ update
 		current.SUBAREA = current.JA_SUBAREA;
 		
 	}
-
+*/
 	//function to display the current rank
 	if(current.IGT>=1296000) {
 		vars.Rank = "Chicken";
