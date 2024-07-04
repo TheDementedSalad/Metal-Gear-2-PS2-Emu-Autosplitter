@@ -8,11 +8,6 @@ state("LiveSplit") {}
 
 startup
 {
-
-	// add D shorthand to context - D = Data
-	vars.D = new ExpandoObject();
-	var D = vars.D;
-
 	//Creates a persistent instance of the PS2 class (for PS2 emulators)
 	//If you want to change it to another emulator type, change the "PS2" to say "PS1" if the splitter is for a PS1 Emu game
 	Assembly.Load(File.ReadAllBytes("Components/emu-help-v2")).CreateInstance("PS2");
