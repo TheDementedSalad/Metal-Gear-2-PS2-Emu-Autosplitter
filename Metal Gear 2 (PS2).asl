@@ -319,120 +319,120 @@ startup
 	settings.CurrentDefaultParent = "MapChanges";
 
 	// Map Changes before having beaten Black Ninja
-	settings.Add("1_0_0", false, "Zansibar Exterior -> Zansibar 1F");
-	settings.SetToolTip("1_0_0", "Split on entering the Zansibar Building from the outside one time");
-	settings.Add("2_1_0", false, "Zansibar 1F -> Zansibar 2F pre Black Ninja");
-	settings.SetToolTip("2_1_0", "Split on entering the Zansibar Building 2F from Zansibar Building 1F one time before fighting Black Ninja");
-	settings.Add("3_2_0", false, "Zansibar 2F -> Zansibar 3F pre Black Ninja");
-	settings.SetToolTip("3_2_0", "Split on entering the Zansibar Building 3F from Zansibar Building 2F one time before fighting Black Ninja");
+	settings.Add("1_0", false, "enter Zansibar 1F");
+	settings.SetToolTip("1_0", "Split on entering the Zansibar Building");
+	settings.Add("2_0", false, "enter Zansibar 2F pre Black Ninja");
+	settings.SetToolTip("2_0", "Split on entering the Zansibar Building 2F one time before fighting Black Ninja");
+	settings.Add("3_0", false, "enter Zansibar 3F pre Black Ninja");
+	settings.SetToolTip("3_0", "Split on entering the Zansibar Building 3F one time before fighting Black Ninja");
 	
 	// Map Changes after having beaten Black Ninja
-	settings.Add("1_3_2", false, "Zansibar 3F -> Zansibar 1F post Black Ninja");
-	settings.SetToolTip("1_3_2", "Split on entering the Zansibar Building 1F from Zansibar Building 3F one time after having fought Black Ninja");
+	settings.Add("1_2", false, "enter Zansibar 1F post Black Ninja");
+	settings.SetToolTip("1_2", "Split on entering the Zansibar Building 1F enterone time after having fought Black Ninja");
 	
 	// Map Changes before having tailed Green Berret
-	settings.Add("7_1_2", false, "Zansibar 1F -> Lost Woods/Desert pre Green Berret Tailed");
-	settings.SetToolTip("7_1_2", "Split on entering Lost Woods from Zansibar Building 1 one time before having trailed Green Berret Guard");
+	settings.Add("7_2", false, "enter Lost Woods/Desert pre Green Berret Tailed");
+	settings.SetToolTip("7_2", "Split on entering Lost Woods one time before having trailed Green Berret Guard");
 	
 	// Map Changes before having beaten Running Man
-	settings.Add("1_7_7", false, "Lost Woods/Desert -> Zansibar 1F post Running Man");
-	settings.SetToolTip("1_7_7", "Split on Zansibar Building 1 from Lost Woods one time after having fought Running Man");
+	settings.Add("1_7", false, "enter Zansibar 1F post Running Man");
+	settings.SetToolTip("1_7", "Split on Zansibar Building 1 one time after having fought Running Man");
 
 	// Map Changes before having saved Holly
-	settings.Add("11_9_9", false, "Tower Outside -> Tower 1F pre Saving Holly");
-	settings.SetToolTip("11_9_9", "Split on entering Tower 1F from Tower Outside one time before having saved Holly");
-	settings.Add("6_11_9", false, "Tower 1F -> Sewers pre Saving Holly");
-	settings.SetToolTip("6_11_9", "Split on entering Sewers from Tower 1F one time before having saved Holly");
+	settings.Add("11_9", false, "enter Tower 1F pre Saving Holly");
+	settings.SetToolTip("11_9", "Split on entering Tower 1F one time before having saved Holly");
+	settings.Add("6_9", false, "enter Sewers pre Saving Holly");
+	settings.SetToolTip("6_9", "Split on entering Sewers one time before having saved Holly");
 	
 	// Map Changes before having beaten Red Blaster
-	settings.Add("5_6_10", false, "Sewers > Zansibar Building B2 pre Red Blaster");
-	settings.SetToolTip("5_6_10", "Split on entering Zansibar Building B2 from Sewers one time before having beaten Red Blaster");
-	settings.Add("6_5_10", false, "Zansibar Building B2 > Sewers pre Red Blaster");
-	settings.SetToolTip("6_5_10", "Split on entering Sewers from Zansibar Building B2 one time before having beaten Red Blaster");
-	settings.Add("11_6_10", false, "Sewers > Tower 1F pre Red Blaster");
-	settings.SetToolTip("11_6_10", "Split on entering Tower 1F from Sewers one time before having beaten Red Blaster");
-	settings.Add("14_11_10", false, "Tower 1F > Tower 30F pre Red Blaster");
-	settings.SetToolTip("14_11_10", "Split on entering Tower 1F from Sewers one time before having beaten Red Blaster");
+	settings.Add("5_10", false, "enter Zansibar Building B2 pre Red Blaster");
+	settings.SetToolTip("5_10", "Split on entering Zansibar Building B2 one time before having beaten Red Blaster");
+	settings.Add("6_10", false, "enter Sewers pre Red Blaster");
+	settings.SetToolTip("6_10", "Split on entering Sewers one time before having beaten Red Blaster");
+	settings.Add("11_10", false, "enter Tower 1F pre Red Blaster");
+	settings.SetToolTip("11_10", "Split on entering Tower 1F one time before having beaten Red Blaster");
+	settings.Add("14_10", false, "enter Tower 30F pre Red Blaster");
+	settings.SetToolTip("14_10", "Split on entering Tower 30F one time before having beaten Red Blaster");
 
 	// Map Changes before meeting Gustava
-	settings.Add("11_14_15", false, "Tower 30F > Tower 1F pre Gustava meetup");
-	settings.SetToolTip("11_14_15", "Split on Tower 1F From Tower 30F one time before meeting with Gustava");
-	settings.Add("6_11_15", false, "Tower 1F > Sewers pre Gustava meetup");
-	settings.SetToolTip("6_11_15", "Split on Sewers From Tower 1F one time before meeting with Gustava");
-	settings.Add("2_6_15", false, "Zansibar Build. Sewers > Zansibar Build. 2F pre Gustava meetup");
-	settings.SetToolTip("2_6_15", "Split on Zansibar Build. 2F From Zansibar Build. Sewers one time before meeting with Gustava");
-	settings.Add("4_2_15", false, "Zansibar Build. 2F > Zansibar Build. 4F pre Gustava meetup");
-	settings.SetToolTip("4_2_15", "Split on Zansibar Build. 4F from Zansibar Build. 2F one time before meeting with Gustava");
+	settings.Add("11_15", false, "enter Tower 1F pre Gustava meetup");
+	settings.SetToolTip("11_15", "Split on Tower 1F one time before meeting with Gustava");
+	settings.Add("6_15", false, "enter Sewers pre Gustava meetup");
+	settings.SetToolTip("6_15", "Split on Sewers one time before meeting with Gustava");
+	settings.Add("2_15", false, "enter Zansibar Build. 2F pre Gustava meetup");
+	settings.SetToolTip("2_15", "Split on Zansibar Build. 2F one time before meeting with Gustava");
+	settings.Add("4_15", false, "enter Zansibar Build. 4F pre Gustava meetup");
+	settings.SetToolTip("4_15", "Split on Zansibar Build. 4F one time before meeting with Gustava");
 
 	// Map Changes after having met Gustava
-	settings.Add("8_4_16", false, "Zansibar Build. 2F > Zansibar Build. 4F post Gustava meetup");
-	settings.SetToolTip("8_4_16", "Split on Zansibar Build. 4F from Zansibar Build. 2F one time after meeting with Gustava");
+	settings.Add("8_16", false, "enter Zansibar Build. 4F post Gustava meetup");
+	settings.SetToolTip("8_16", "Split on Zansibar Build. 4F one time after meeting with Gustava");
 
 	// Map Changes after having met Dr. Madnar
-	settings.Add("15_8_17", false, "Zansibar Build. B3 > Crevice North post Madnar meetup");
-	settings.SetToolTip("15_8_17", "Split on Crevice North from Zansibar Build. B3 one time before meeting with Madnar");
+	settings.Add("15_17", false, "enter Crevice North post Madnar meetup");
+	settings.SetToolTip("15_17", "Split on Crevice North one time before meeting with Madnar");
 
 	// Map Changes after having Bridge explosion happen
-	settings.Add("11_15_18", false, "Crevice North > Tower 1F Post Bridge Cutscene");
-	settings.SetToolTip("11_15_18", "Split on Tower 1F from Crevice North one time before meeting with Gustava");
-	settings.Add("9_11_18", false, "Tower 1F > Tower Outside Post Bridge Cutscene");
-	settings.SetToolTip("9_11_18", "Split on Tower Outside from Tower 1F one time before meeting with Gustava");
-	settings.Add("7_9_18", false, "Tower 1F > Singing Sands Post Bridge Cutscene");
-	settings.SetToolTip("7_9_18", "Split on Singing Sands from Tower Outside one time before meeting with Gustava");
-	settings.Add("1_7_18", false, "Singing Sands > Zansibar Building 1F Post Bridge Cutscene");
-	settings.SetToolTip("1_7_18", "Split on Zansibar Build. 1F from Singing Sands one time before meeting with Gustava");
+	settings.Add("11_18", false, "enter Tower 1F Post Bridge Cutscene");
+	settings.SetToolTip("11_18", "Split on Tower 1F one time before meeting with Gustava");
+	settings.Add("9_18", false, "enter Tower Outside Post Bridge Cutscene");
+	settings.SetToolTip("9_18", "Split on Tower Outside one time before meeting with Gustava");
+	settings.Add("7_18", false, "enter Singing Sands Post Bridge Cutscene");
+	settings.SetToolTip("7_18", "Split on Singing Sands one time before meeting with Gustava");
+	settings.Add("1_18", false, "enter Zansibar Building 1F Post Bridge Cutscene");
+	settings.SetToolTip("1_18", "Split on Zansibar Build. 1F one time before meeting with Gustava");
 
 	// Map Changes after acquiring hang glider
-	settings.Add("4_1_19", false, "Zansibar Build. 1F > Zansibar Build. 4F Post Hang Glider acquisition");
-	settings.SetToolTip("4_1_19", "Split on Zansibar Build. 4F from Zansibar Build. 1F one time after acquiring the hang glider");
-	settings.Add("8_4_19", false, "Zansibar Build. 4F > Zansibar Build. B3 Post Hang Glider acquisition");
-	settings.SetToolTip("8_4_19", "Split on Zansibar Build. B4 from Zansibar Build. 4F one time after acquiring the hang glider");
-	settings.Add("15_8_19", false, "Zansibar Build. B3 > Crevice North Post Hang Glider acquisition");
-	settings.SetToolTip("15_8_19", "Split on Crevice North from Zansibar Build. B3 one time after acquiring the hang glider");
-	settings.Add("11_15_19", false, "Crevice North > Tower 1F Post Hang Glider acquisition");
-	settings.SetToolTip("11_15_19", "Split on Tower 1F from Crevice North one time after acquiring the hang glider");
+	settings.Add("4_19", false, "enter Zansibar Build. 4F Post Hang Glider acquisition");
+	settings.SetToolTip("4_19", "Split on Zansibar Build. 4F one time after acquiring the hang glider");
+	settings.Add("8_19", false, "enter Zansibar Build. B3 Post Hang Glider acquisition");
+	settings.SetToolTip("8_19", "Split on Zansibar Build. B4 one time after acquiring the hang glider");
+	settings.Add("15_19", false, "enter Crevice North Post Hang Glider acquisition");
+	settings.SetToolTip("15_19", "Split on Crevice North one time after acquiring the hang glider");
+	settings.Add("11_19", false, "enter Tower 1F Post Hang Glider acquisition");
+	settings.SetToolTip("11_19", "Split on Tower 1F one time after acquiring the hang glider");
 
 	// Map Changes after having beaten four horsemen
-	settings.Add("12_11_21", false, "Tower 1F > Tower 10F post Four Horsemen");
-	settings.SetToolTip("12_11_21", "Split on Tower 10F from Tower 1F one time after having fought four Horsemen");
-	settings.Add("16_12_21", false, "Tower 10F > Tower Stair Chase post Four Horsemen");
-	settings.SetToolTip("16_12_21", "Split on Tower Stair Chase one time after having fought four Horsemen");
-	settings.Add("13_16_21", false, "Tower Stair Chase > Tower 20F post Four Horsemen");
-	settings.SetToolTip("13_16_21", "Split on entering Tower 20F after Tower Stair Chase one time after having fought four Horsemen");
+	settings.Add("12_21", false, "enter Tower 10F post Four Horsemen");
+	settings.SetToolTip("12_21", "Split on Tower 10F one time after having fought four Horsemen");
+	settings.Add("16_21", false, "enter Tower Stair Chase post Four Horsemen");
+	settings.SetToolTip("16_21", "Split on starting Tower Stair Chase one time after having fought four Horsemen");
+	settings.Add("13_21", false, "enter Tower 20F post Four Horsemen");
+	settings.SetToolTip("13_21", "Split on entering Tower 20F one time after having fought four Horsemen");
 
 	// Map Changes before fighting jungle evil
-	settings.Add("10_15_22", false, "Crevice North > Grass Fields pre Jungle Evil");
-	settings.SetToolTip("10_15_22", "Split on entering Grass Fields after Crevice North one time before having fought Jungle Evil");
+	settings.Add("10_22", false, "enter Grass Fields pre Jungle Evil");
+	settings.SetToolTip("10_22", "Split on entering Grass Fields after Crevice North one time before having fought Jungle Evil");
 
 	// Map Changes after fighting jungle evil
-	settings.Add("15_10_24", false, "Bio Lab > Crevice North after Jungle Evil");
-	settings.SetToolTip("15_10_24", "Split on entering Crevice North after Bio Lab one time after having fought Night Fright");
-	settings.Add("10_15_24", false, "Crevice North > Prison Camp after Jungle Evil");
-	settings.SetToolTip("10_15_24", "Split on entering Prison Camp after Crevice North one time after having fought Night Fright");
+	settings.Add("15_24", false, "enter Crevice North after Jungle Evil");
+	settings.SetToolTip("15_24", "Split on entering Crevice North after Bio Lab one time after having fought Night Fright");
+	settings.Add("10_24", false, "enter Prison Camp after Jungle Evil");
+	settings.SetToolTip("10_24", "Split on entering Prison Camp after Crevice North one time after having fought Night Fright");
 
 	// Map Changes before fighting Night Fright
-	settings.Add("19_10_24", false, "Bio Lab > Crevice North after Jungle Evil");
-	settings.SetToolTip("19_10_24", "Split on entering Crevice North after Bio Lab one time after having fought Night Fright");
+	settings.Add("19_24", false, "enter Crevice North after Jungle Evil");
+	settings.SetToolTip("19_24", "Split on entering Crevice North one time after having fought Night Fright");
 
 	// Map Changes after fighting night fright
-	settings.Add("10_19_27", false, "Prison Camp B3 > 1F after Night Fright");
-	settings.SetToolTip("10_19_27", "Split on entering Prison Camp 1F after Prison Camp B3 one time after having fought Night Fright");
-	settings.Add("15_10_27", false, "Prison Camp 1F > Crevice North after Night Fright");
-	settings.SetToolTip("15_10_27", "Split on entering Crevice North after Prison Camp 1F one time after having fought Night Fright");
+	settings.Add("10_27", false, "enter 1F after Night Fright");
+	settings.SetToolTip("10_27", "Split on entering Prison Camp 1F one time after having fought Night Fright");
+	settings.Add("15_27", false, "enter Crevice North after Night Fright");
+	settings.SetToolTip("15_27", "Split on entering Crevice North one time after having fought Night Fright");
 
 	// Map Changes after acquiring Level 9 Card
-	settings.Add("15_10_28", false, "Prison Camp 1F > Crevice North after acquiring Level 9 Card");
-	settings.SetToolTip("15_10_28", "Split on entering Crevice North after Prison Camp 1F one time after acquiring Level 9 Card");
-	settings.Add("19_10_28", false, "Prison Camp B3 > 1F after acquiring Level 9 Card");
-	settings.SetToolTip("19_10_28", "Split on entering Prison Camp 1F after Prison Camp B3 one time after acquiring Level 9 Card");
+	settings.Add("15_28", false, "enter Crevice North after acquiring Level 9 Card");
+	settings.SetToolTip("15_28", "Split on entering Crevice North one time after acquiring Level 9 Card");
+	settings.Add("19_28", false, "enter 1F after acquiring Level 9 Card");
+	settings.SetToolTip("19_28", "Split on entering Prison Camp 1F one time after acquiring Level 9 Card");
 
 	// Map Changes after beating Dr. Madnar
-	settings.Add("18_19_30", false, "Prison Camp B3 > Underground Base after beating the traitor");
-	settings.SetToolTip("18_19_30", "Split on entering Underground Base after Prison Camp B3 one time after beating the traitor");
+	settings.Add("18_30", false, "enter Underground Base after beating the traitor");
+	settings.SetToolTip("18_30", "Split on entering Underground Base one time after beating the traitor");
 
 	// Map Changes after having met Holly
-	settings.Add("17_18_37", false, "Underground Base > Jungle Escape after meeting with Holly");
-	settings.SetToolTip("17_18_37", "Split on Jungle Escape after Prison Camp B3 one time after meeting with Holly");
+	settings.Add("17_37", false, "enter Jungle Escape after meeting with Holly");
+	settings.SetToolTip("17_37", "Split on Jungle Escape one time after meeting with Holly");
 
 	settings.CurrentDefaultParent = "Locations";
 	settings.Add("RoomChanges", false, "Splits On Entering Specific Rooms");
@@ -636,7 +636,7 @@ split
 	}
 
 	if(current.AREA != old.AREA){
-		setting = current.AREA + "_" + old.AREA + "_" + vars.Storyflag;
+		setting = current.AREA + "_" + vars.Storyflag;
 	}
 		
 		//final split - always active
