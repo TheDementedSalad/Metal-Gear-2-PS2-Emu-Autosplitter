@@ -214,7 +214,6 @@ startup
 
 	vars.Rank = "";
 	vars.Difficulty = "";
-	vars.Debug = false;
 
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//Metal Gear 2: Solid Snake Splits
@@ -274,6 +273,10 @@ startup
 	settings.Add("7_9_4", false, "Finish Swamp Area Going To Running Man");
 	settings.Add("7_4_9", false, "Start Swamp Area Coming From Running Man");
 	settings.Add("7_7_8", false, "Finish Swamp Area Coming From Running Man");
+	settings.Add("5_1_4", false, "Entering Armory 1st time before Red Blaster");
+	settings.Add("5_4_1", false, "Leaving Armory 1st time before Red Blaster");
+	settings.Add("5_1_4_2", false, "Entering Armory 2nd time after Red Blaster");
+	settings.Add("5_4_1_2", false, "Leaving Armory 2nd time after Red Blaster");
 	settings.Add("14_7_6", false, "Entering Tower 31F Rooftop");
 	settings.Add("4_26_8", false, "Entering Freezer to Freeze Brooch");
 	settings.Add("4_9_14", false, "Entering Sauna to Heat Brooch");
@@ -400,75 +403,57 @@ split
 	//Iterates through our splits and checks the bitmask for each one
 	for(int i = 0; i < 8; i++){
 		if(current.EQ1 != old.EQ1 && vars.bitCheck(current.EQ1, i)){
-			if (vars.Debug) print("found changed bit in EQ1_" + i);
 			setting = "EQ1_" + i;
 		}
 		if(current.EQ2 != old.EQ2 && vars.bitCheck(current.EQ2, i)){
-			if (vars.Debug) print("found changed bit in EQ2_" + i);
 			setting = "EQ2_" + i;
 		}
 		if(current.EQ3 != old.EQ3 && vars.bitCheck(current.EQ3, i)){
-			if (vars.Debug) print("found changed bit in EQ3_" + i);
 			setting = "EQ3_" + i;
 		}
 		if(current.EQ4 != old.EQ4 && vars.bitCheck(current.EQ4, i)){
-			if (vars.Debug) print("found changed bit in EQ4_" + i);
 			setting = "EQ4_" + i;
 		}
 		if(current.EQ5 != old.EQ5 && vars.bitCheck(current.EQ5, i)){
-			if (vars.Debug) print("found changed bit in EQ5_" + i);
 			setting = "EQ5_" + i;
 		}
 		if(current.EQ6 != old.EQ6 && vars.bitCheck(current.EQ6, i)){
-			if (vars.Debug) print("found changed bit in EQ6_" + i);
 			setting = "EQ6_" + i;
 		}
 		if(current.EV2 != old.EV2 && vars.bitCheck(current.EV2, i)){
-			if (vars.Debug) print("found changed bit in EV2_" + i);
 			setting = "EV2_" + i;
 		}
 		if(current.EV3 != old.EV3 && vars.bitCheck(current.EV3, i)){
-			if (vars.Debug) print("found changed bit in EV3_" + i);
 			setting = "EV3_" + i;
 		}
 		if(current.EV4 != old.EV4 && vars.bitCheck(current.EV4, i)){
-			if (vars.Debug) print("found changed bit in EV4_" + i);
 			setting = "EV4_" + i;
 		}
 		if(current.EV5 != old.EV5 && vars.bitCheck(current.EV5, i)){
-			if (vars.Debug) print("found changed bit in EV5_" + i);
 			setting = "EV5_" + i;
 		}
 		if(current.EV6 != old.EV6 && vars.bitCheck(current.EV6, i)){
-			if (vars.Debug) print("found changed bit in EV6_" + i);
 			setting = "EV6_" + i;
 		}
 		if(current.EV7 != old.EV7 && vars.bitCheck(current.EV7, i)){
-			if (vars.Debug) print("found changed bit in EV7_" + i);
 			setting = "EV7_" + i;
 		}
 		if(current.EV8 != old.EV8 && vars.bitCheck(current.EV8, i)){
-			if (vars.Debug) print("found changed bit in EV8_" + i);
 			setting = "EV8_" + i;
 		}
 		if(current.EV9 != old.EV9 && vars.bitCheck(current.EV9, i)){
-			if (vars.Debug) print("found changed bit in EV9_" + i);
 			setting = "EV9_" + i;
 		}
 		if(current.EV10 != old.EV10 && vars.bitCheck(current.EV10, i)){
-			if (vars.Debug) print("found changed bit in EV10_" + i);
 			setting = "EV10_" + i;
 		}
 		if(current.EV11 != old.EV11 && vars.bitCheck(current.EV11, i)){
-			if (vars.Debug) print("found changed bit in EV11_" + i);
 			setting = "EV11_" + i;
 		}
 		if(current.CodecsCalled != old.CodecsCalled && vars.bitCheck(current.CodecsCalled, i)){
 			setting = "CodecsCalled_" + i;
 		}
 		if (setting.Length > 0 && settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)){
-			// Debug. Comment out before release.
-			if (vars.Debug) print("split on " + setting);
 			return true;
 		}
 	}
@@ -481,6 +466,10 @@ split
 			setting = "";
 		} else if(setting == "4_9_14" && !vars.bitCheck(current.EQ5, 0)) {
 			setting = "";
+		} else if(setting == "5_1_4" && vars.bitCheck(current.EV4, 4)) {
+			setting = "5_1_4_2";
+		} else if(setting == "5_4_1" && vars.bitCheck(current.EV4, 4)) {
+			setting = "5_4_1_2";
 		}
 	}
 		
@@ -494,10 +483,7 @@ split
 	}
 		
 	
-//	if (vars.Debug && setting.Length > 0) print(setting + " Contains Key " + settings.ContainsKey(setting) + " and part of setting " + settings[setting]);
-	if (setting.Length > 0 && settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)){
-		// Debug. Comment out before release.
-		if (vars.Debug) print("split on " + setting);
+	if (settings.ContainsKey(setting) && settings[setting] && vars.completedSplits.Add(setting)) {
 		return true;
 	}
 }
