@@ -570,7 +570,7 @@ split
 {
 	string setting = "";
 	//Iterates through our splits and checks the bitmask for each one
-	for(int i = 7; i > -1; i--){
+	for(int i = 0; i < 8; i++){
 		if(current.EQ1 != old.EQ1 && vars.bitCheck(current.EQ1, i)){
 			setting = "EQ1_" + i;
 		}
