@@ -315,7 +315,7 @@ startup
 	settings.Add("Locations", false, "Splits On Arriving at a specific location");
 
 	settings.CurrentDefaultParent = "Locations";
-	settings.Add("MapChanges", false, "Splits On Entering Specific Rooms");
+	settings.Add("MapChanges", false, "Splits On Entering Specific Maps");
 	settings.CurrentDefaultParent = "MapChanges";
 
 	// Map Changes before having beaten Black Ninja
