@@ -495,7 +495,7 @@ startup
 	vars.Continue = "";
 	vars.AlertMode = "";
 	vars.HumansKilled = "";
-	vars.RaionUsed = "";
+	vars.RationUsed = "";
 	vars.SpecialItem = "";
 	vars.CodeName = "";
 	vars.Completion = "0%";
@@ -609,7 +609,7 @@ update
 	vars.Continue = current.Continue;
 	vars.AlertMode = current.Alert;
 	vars.HumansKilled = current.Kills;
-	vars.RaionUsed = current.Ration;
+	vars.RationUsed = current.Ration;
 
 	// define string that can contain the value based on dictionary key
 	string loc = null;
@@ -640,7 +640,7 @@ onStart
 	vars.Continue = "";
 	vars.AlertMode = "";
 	vars.HumansKilled = "";
-	vars.RaionUsed = "";
+	vars.RationUsed = "";
 	vars.SpecialItem = "";
 	vars.CodeName = "";
 	vars.Completion = "0%";
