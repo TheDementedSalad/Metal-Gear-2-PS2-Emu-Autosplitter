@@ -207,7 +207,7 @@ startup
 	
 	D.BossSet = new List<string>(){
 	"Started Black Ninja", "Defeated Black Ninja", "Started Running Man", "Defeated Running Man", "Started Hind D", "Defeated Hind D", "Started Red Blaster", "Defeated Red Blaster",
-	"Started Four Horsemen", "Deafeated Four Horsemen", "Started Jungle Evil", "Defeated Jungle Evil", "Started Night Fright", "Defeated Night Fright", "Started Traitor Encounter", "Defeated Traitor",
+	"Started Four Horsemen", "Defeated Four Horsemen", "Started Jungle Evil", "Defeated Jungle Evil", "Started Night Fright", "Defeated Night Fright", "Started Traitor Encounter", "Defeated Traitor",
 	"Started Metal Gear D", "Defeated Metal Gear D", "Started Gray Fox", "Defeated Gray Fox", "Started Big Boss", "Defeated Big Boss"};
 
 	D.EventID = new List<string>(){
@@ -470,10 +470,10 @@ startup
 		{ 18, "Bridge exploded" },
 		{ 19, "Glider acquired" },
 		{ 20, "Four Horsemen started" },
-		{ 21, "Four Horsemen deafeated" },
+		{ 21, "Four Horsemen defeated" },
 		{ 22, "Crevice Flight taken" },
 		{ 23, "Jungle Evil started" },
-		{ 24, "Jungle Evil deafeated" },
+		{ 24, "Jungle Evil defeated" },
 		{ 25, "Prison Entered" },
 		{ 26, "Night Fright started" },
 		{ 27, "Night Fright defeated" },
