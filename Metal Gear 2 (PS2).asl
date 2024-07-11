@@ -191,12 +191,12 @@ startup
 	"Handgun", "Submachine Gun", "Grenades", "Stinger Missiles", "RC Missiles", "Plastic Explosives", "Land Mines", "Camoflage Mat", "Gas Grenade", "Mouse", "Lighter", "Suppressor"};
 	
 	D.ItemID = new List<string>(){
-	"EQ3_2", "EQ3_3", "EQ3_5", "EQ3_6", "EQ3_7",
+	"EQ3_2", "EQ3_3", "EQ3_4", "EQ3_5", "EQ3_6", "EQ3_7",
 	"EQ4_0", "EQ4_1", "EQ4_2", "EQ4_3", "EQ4_4", "EQ4_5", "EQ4_7",
 	"EQ5_0", "EQ6_5", "EQ6_6", "EQ6_7","EQ7_0","EQ7_1"};
 	
 	D.ItemSet = new List<string>(){
-	"Binoculars", "Night-Vision Goggles", "Gas Mask", "Body Armour", "Oxygen Tank",
+	"Binoculars", "Night-Vision Goggles", "IR Goggles", "Gas Mask", "Body Armour", "Oxygen Tank",
 	"Mine Detector", "Hang Glider", "Cardboard Box", "Bucket", "Cold Medicine", "Cassette Tape", "Egg (Owl)",
 	"Brooch", "Spray", "Cartridge", "Ration B1", "Ration B2", "Ration B3"};
 	
@@ -733,7 +733,7 @@ split
 			foreach(string setting in D.setting){
 				//up completion counter based on newly added event in event lists, equipment, weapon or codec
 				if ((D.KeyID.IndexOf(setting) > -1 || D.GunID.IndexOf(setting) > -1 || D.ItemID.IndexOf(setting) > -1 || D.BossID.IndexOf(setting) > -1 || D.EventID.IndexOf(setting) > -1 || D.CodecsID.IndexOf(setting) > -1) && D.Completionqueue.Add(setting)) {
-					vars.Completion = Math.Floor((D.Completionqueue.Count / 80f) * 100).ToString() + "%";
+					vars.Completion = Math.Floor((D.Completionqueue.Count / 81f) * 100).ToString() + "%";
 				}
 				//up story flag regardless if split condition is met
 				if ((D.StoryflagList.IndexOf(setting) > -1 && D.StoryflagList.IndexOf(setting) > D.Storyflag -1) && D.Storyflagqueue.Add(setting)){
