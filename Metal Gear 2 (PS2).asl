@@ -264,7 +264,7 @@ startup
 	
 	settings.Add("Items", false, "General Items");
 	settings.CurrentDefaultParent = "Items";
-	for(int i = 0; i < 20; i++){
+	for(int i = 0; i < 18; i++){
 		settings.Add("" + D.ItemID[i].ToString(), false, "" + D.ItemSet[i].ToString());
    	}
 	settings.CurrentDefaultParent = null;
@@ -733,7 +733,7 @@ split
 			foreach(string setting in D.setting){
 				//up completion counter based on newly added event in event lists, equipment, weapon or codec
 				if ((D.KeyID.IndexOf(setting) > -1 || D.GunID.IndexOf(setting) > -1 || D.ItemID.IndexOf(setting) > -1 || D.BossID.IndexOf(setting) > -1 || D.EventID.IndexOf(setting) > -1 || D.CodecsID.IndexOf(setting) > -1) && D.Completionqueue.Add(setting)) {
-					vars.Completion = Math.Floor((D.Completionqueue.Count / 81f) * 100).ToString() + "%";
+					vars.Completion = Math.Floor((D.Completionqueue.Count / 80f) * 100).ToString() + "%";
 				}
 				//up story flag regardless if split condition is met
 				if ((D.StoryflagList.IndexOf(setting) > -1 && D.StoryflagList.IndexOf(setting) > D.Storyflag -1) && D.Storyflagqueue.Add(setting)){
