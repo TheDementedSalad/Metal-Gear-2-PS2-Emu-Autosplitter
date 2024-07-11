@@ -191,12 +191,12 @@ startup
 	"Handgun", "Submachine Gun", "Grenades", "Stinger Missiles", "RC Missiles", "Plastic Explosives", "Land Mines", "Camoflage Mat", "Gas Grenade", "Mouse", "Lighter", "Suppressor"};
 	
 	D.ItemID = new List<string>(){
-	"EQ3_2", "EQ3_3", "EQ3_4", "EQ3_5", "EQ3_6", "EQ3_7",
+	"EQ3_2", "EQ3_3", "EQ3_5", "EQ3_6", "EQ3_7",
 	"EQ4_0", "EQ4_1", "EQ4_2", "EQ4_3", "EQ4_4", "EQ4_5", "EQ4_6", "EQ4_7",
 	"EQ5_0", "EQ6_5", "EQ6_6", "EQ6_7","EQ7_0","EQ7_1"};
 	
 	D.ItemSet = new List<string>(){
-	"Binoculars", "Night-Vision Goggles", "Infrared Goggles", "Gas Mask", "Body Armour", "Oxygen Tank",
+	"Binoculars", "Night-Vision Goggles", "Gas Mask", "Body Armour", "Oxygen Tank",
 	"Mine Detector", "Hang Glider", "Cardboard Box", "Bucket", "Cold Medicine", "Cassette Tape", "Egg (Snake)", "Egg (Owl)",
 	"Brooch", "Spray", "Cartridge", "Ration B1", "Ration B2", "Ration B3"};
 	
