@@ -715,7 +715,7 @@ split
 		if (setting.Length > 0) {
 			//up completion counter based on newly added event in event lists, equipment, weapon or codec
 			if ((D.KeyID.IndexOf(setting) > -1 || D.GunID.IndexOf(setting) > -1 || D.ItemID.IndexOf(setting) > -1 || D.BossID.IndexOf(setting) > -1 || D.EventID.IndexOf(setting) > -1 || D.CodecsID.IndexOf(setting) > -1) && D.Completionqueue.Add(setting)) {
-				vars.Completion = Math.Floor((D.Completionqueue.Count / 85f) * 100).ToString() + "%";
+				vars.Completion = Math.Floor((D.Completionqueue.Count / 84f) * 100).ToString() + "%";
 				//vars.Completion = vars.D.Completionqueue.Count;
 			}
 			//up story flag regardless if split condition is met
