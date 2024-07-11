@@ -508,9 +508,10 @@ init
 	// add D shorthand to context
   	var D = vars.D;
 	//This is used for our splits
-	vars.D.completedSplits = new HashSet<string>();
-	vars.D.Storyflagqueue = new HashSet<string>();
-	vars.D.Completionqueue = new HashSet<string>();
+	D.completedSplits = new HashSet<string>();
+	D.Storyflagqueue = new HashSet<string>();
+	D.Completionqueue = new HashSet<string>();
+	D.setting = new HashSet<string>();
 }
 
 update
@@ -658,92 +659,98 @@ split
 	// add D shorthand to context
   	var D = vars.D;
 
-	string setting = "";
+	D.setting.Clear();
 	//Iterates through our splits and checks the bitmask for each one
 	for(int i = 0; i < 8; i++){
 		if(current.EQ1 != old.EQ1 && D.bitCheck(current.EQ1, i)){
-			setting = "EQ1_" + i;
+			D.setting.Add("EQ1_" + i);
 		}
 		if(current.EQ2 != old.EQ2 && D.bitCheck(current.EQ2, i)){
-			setting = "EQ2_" + i;
+			D.setting.Add("EQ2_" + i);
 		}
 		if(current.EQ3 != old.EQ3 && D.bitCheck(current.EQ3, i)){
-			setting = "EQ3_" + i;
+			D.setting.Add("EQ3_" + i);
 		}
 		if(current.EQ4 != old.EQ4 && D.bitCheck(current.EQ4, i)){
-			setting = "EQ4_" + i;
+			D.setting.Add("EQ4_" + i);
 		}
 		if(current.EQ5 != old.EQ5 && D.bitCheck(current.EQ5, i)){
-			setting = "EQ5_" + i;
+			D.setting.Add("EQ5_" + i);
 		}
 		if(current.EQ6 != old.EQ6 && D.bitCheck(current.EQ6, i)){
-			setting = "EQ6_" + i;
+			D.setting.Add("EQ6_" + i);
 		}
 		if(current.EV2 != old.EV2 && D.bitCheck(current.EV2, i)){
-			setting = "EV2_" + i;
+			D.setting.Add("EV2_" + i);
 		}
 		if(current.EV3 != old.EV3 && D.bitCheck(current.EV3, i)){
-			setting = "EV3_" + i;
+			D.setting.Add("EV3_" + i);
 		}
 		if(current.EV4 != old.EV4 && D.bitCheck(current.EV4, i)){
-			setting = "EV4_" + i;
+			D.setting.Add("EV4_" + i);
 		}
 		if(current.EV5 != old.EV5 && D.bitCheck(current.EV5, i)){
-			setting = "EV5_" + i;
+			D.setting.Add("EV5_" + i);
 		}
 		if(current.EV6 != old.EV6 && D.bitCheck(current.EV6, i)){
-			setting = "EV6_" + i;
+			D.setting.Add("EV6_" + i);
 		}
 		if(current.EV7 != old.EV7 && D.bitCheck(current.EV7, i)){
-			setting = "EV7_" + i;
+			D.setting.Add("EV7_" + i);
 		}
 		if(current.EV8 != old.EV8 && D.bitCheck(current.EV8, i)){
-			setting = "EV8_" + i;
+			D.setting.Add("EV8_" + i);
 		}
 		if(current.EV9 != old.EV9 && D.bitCheck(current.EV9, i)){
-			setting = "EV9_" + i;
+			D.setting.Add("EV9_" + i);
 		}
 		if(current.EV10 != old.EV10 && D.bitCheck(current.EV10, i)){
-			setting = "EV10_" + i;
+			D.setting.Add("EV10_" + i);
 		}
 		if(current.EV11 != old.EV11 && D.bitCheck(current.EV11, i)){
-			setting = "EV11_" + i;
+			D.setting.Add("EV11_" + i);
 		}
 		if(current.CodecsCalled != old.CodecsCalled && D.bitCheck(current.CodecsCalled, i)){
-			setting = "CodecsCalled_" + i;
+			D.setting.Add("CodecsCalled_" + i);
 		}
-		if (setting.Length > 0) {
-			//up completion counter based on newly added event in event lists, equipment, weapon or codec
-			if ((D.KeyID.IndexOf(setting) > -1 || D.GunID.IndexOf(setting) > -1 || D.ItemID.IndexOf(setting) > -1 || D.BossID.IndexOf(setting) > -1 || D.EventID.IndexOf(setting) > -1 || D.CodecsID.IndexOf(setting) > -1) && D.Completionqueue.Add(setting)) {
-				vars.Completion = Math.Floor((D.Completionqueue.Count / 84f) * 100).ToString() + "%";
-				//vars.Completion = vars.D.Completionqueue.Count;
-			}
-			//up story flag regardless if split condition is met
-			if ((D.StoryflagList.IndexOf(setting) > -1 && D.StoryflagList.IndexOf(setting) > D.Storyflag -1) && D.Storyflagqueue.Add(setting)){
-				D.Storyflag = (D.StoryflagList.IndexOf(setting))+1;
-			}
-			if (settings.ContainsKey(setting) && settings[setting] && D.completedSplits.Add(setting)){
-				return true;
+		if (D.setting.Count > 0) {
+			foreach(string setting in D.setting){
+				//up completion counter based on newly added event in event lists, equipment, weapon or codec
+				if ((D.KeyID.IndexOf(setting) > -1 || D.GunID.IndexOf(setting) > -1 || D.ItemID.IndexOf(setting) > -1 || D.BossID.IndexOf(setting) > -1 || D.EventID.IndexOf(setting) > -1 || D.CodecsID.IndexOf(setting) > -1) && D.Completionqueue.Add(setting)) {
+					vars.Completion = Math.Floor((D.Completionqueue.Count / 81f) * 100).ToString() + "%";
+					print("Completion update for event " + setting + " adding towards the total count of " + D.Completionqueue.Count + " for completion of " + vars.Completion);
+					//vars.Completion = vars.D.Completionqueue.Count;
+				}
+				//up story flag regardless if split condition is met
+				if ((D.StoryflagList.IndexOf(setting) > -1 && D.StoryflagList.IndexOf(setting) > D.Storyflag -1) && D.Storyflagqueue.Add(setting)){
+					D.Storyflag = (D.StoryflagList.IndexOf(setting))+1;
+				}
+				if (settings.ContainsKey(setting) && settings[setting] && D.completedSplits.Add(setting)){
+					return true;
+				}
 			}
 		}
 	}
 	
+	D.setting.Clear();
+
 	if(current.SUBAREA != old.SUBAREA){
-		setting = current.AREA + "_" + current.SUBAREA + "_" + old.SUBAREA + "_" + D.Storyflag;
+		D.setting.Add(current.AREA + "_" + current.SUBAREA + "_" + old.SUBAREA + "_" + D.Storyflag);
 	}
 
 	if(current.AREA != old.AREA){
-		setting = current.AREA + "_" + D.Storyflag;
+		D.setting.Add(current.AREA + "_" + D.Storyflag);
 	}
 		
 		//final split - always active
 	if(current.GameState == 24 && old.GameState != 24){
-		setting = "Final";
+		D.setting.Add("Final");
 	}
 		
-	
-	if (settings.ContainsKey(setting) && settings[setting] && D.completedSplits.Add(setting)) {
-		return true;
+	foreach (string setting in D.setting) {
+		if (settings.ContainsKey(setting) && settings[setting] && D.completedSplits.Add(setting)) {
+			return true;
+		}
 	}
 }
 
