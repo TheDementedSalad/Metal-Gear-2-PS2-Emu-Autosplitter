@@ -292,8 +292,10 @@ startup
 	settings.SetToolTip("3_0", "Split on entering the Zansibar Build. 3F one time before fighting Black Ninja");
 	
 	// Map Changes after having beaten Black Ninja
+	settings.Add("2_2", false, "enter Zansibar 2F post Black Ninja");
+	settings.SetToolTip("2_2", "Split on entering the Zansibar Build. 2F one time after having fought Black Ninja");
 	settings.Add("1_2", false, "enter Zansibar 1F post Black Ninja");
-	settings.SetToolTip("1_2", "Split on entering the Zansibar Build. 1F enterone time after having fought Black Ninja");
+	settings.SetToolTip("1_2", "Split on entering the Zansibar Build. 1F one time after having fought Black Ninja");
 	
 	// Map Changes before having tailed Green Berret
 	settings.Add("7_2", false, "enter Lost Woods/Desert pre Green Berret Tailed");
@@ -350,10 +352,16 @@ startup
 	settings.SetToolTip("1_18", "Split on Zansibar Build. 1F one time before meeting with Gustava");
 
 	// Map Changes after acquiring hang glider
+	settings.Add("5_19", false, "enter Zansibar Build. B2 Post Hang Glider acquisition");
+	settings.SetToolTip("5_19", "Split on Zansibar Build. B2 one time after acquiring the hang glider");
+	settings.Add("2_19", false, "enter Zansibar Build. 2F Post Hang Glider acquisition");
+	settings.SetToolTip("2_19", "Split on Zansibar Build. 2F one time after acquiring the hang glider");
+	settings.Add("3_19", false, "enter Zansibar Build. 3F Post Hang Glider acquisition");
+	settings.SetToolTip("3_19", "Split on Zansibar Build. 3F one time after acquiring the hang glider");
 	settings.Add("4_19", false, "enter Zansibar Build. 4F Post Hang Glider acquisition");
 	settings.SetToolTip("4_19", "Split on Zansibar Build. 4F one time after acquiring the hang glider");
 	settings.Add("8_19", false, "enter Zansibar Build. B3 Post Hang Glider acquisition");
-	settings.SetToolTip("8_19", "Split on Zansibar Build. B4 one time after acquiring the hang glider");
+	settings.SetToolTip("8_19", "Split on Zansibar Build. B3 one time after acquiring the hang glider");
 	settings.Add("15_19", false, "enter Crevice North Post Hang Glider acquisition");
 	settings.SetToolTip("15_19", "Split on Crevice North one time after acquiring the hang glider");
 	settings.Add("11_19", false, "enter Tower 1F Post Hang Glider acquisition");
@@ -388,6 +396,14 @@ startup
 	// Map Changes after acquiring Level 9 Card
 	settings.Add("15_28", false, "enter Crevice North after acquiring Level 9 Card");
 	settings.SetToolTip("15_28", "Split on entering Crevice North one time after acquiring Level 9 Card");
+	settings.Add("11_28", false, "enter Tower 1F after acquiring Level 9 Card");
+	settings.SetToolTip("11_28", "Split on entering Tower 1F one time after acquiring Level 9 Card");
+	settings.Add("9_28", false, "enter Tower Outside after acquiring Level 9 Card");
+	settings.SetToolTip("9_28", "Split on Tower Outside North one time after acquiring Level 9 Card");
+	settings.Add("7_28", false, "enter Lost Woods after acquiring Level 9 Card");
+	settings.SetToolTip("7_28", "Split on Lost Woods North one time after acquiring Level 9 Card");
+	settings.Add("1_28", false, "enter Zansibar Bld. 1F after acquiring Level 9 Card");
+	settings.SetToolTip("1_28", "Split on Zansibar Bld. 1F one time after acquiring Level 9 Card");
 	settings.Add("10_28", false, "enter Prison Camp 1F after acquiring Level 9 Card");
 	settings.SetToolTip("10_28", "Split on entering Prison Camp 1F one time after acquiring Level 9 Card");
 	settings.Add("19_28", false, "enter Prison Camp B3 after acquiring Level 9 Card");
